@@ -1,0 +1,73 @@
+@use '../sass/colors' as *;
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	min-height: 85px;
+	border-bottom: 1px solid $eag-white;
+	z-index: 10;
+
+	&__navbar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+        height: 85px;
+	}
+
+	&__logo {
+		width: 20%;
+
+		& img {
+			width: 150px;
+			height: 50px;
+		}
+	}
+
+	&__menu {
+		width: 60%;
+	}
+
+	&__menu-items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__menu-item {
+        margin: 0 0.2em;
+		font-size: 1.6rem;
+		font-weight: 400;
+		list-style: none;
+
+		& a {
+            display: block;
+            padding: 0.6em 1.5em;
+			text-transform: uppercase;
+			color: $eag-white;
+		}
+	}
+	&__menu-item:first-child {
+		border-radius: 5px;
+		background-color: $eag-blue;
+	}
+
+	&__more-btns {
+        display: flex;
+        justify-content: center;
+		width: 20%;
+        height: auto;
+		font-size: 2.6rem;
+        
+		& i {
+            padding: .4em;
+            background-color: $eag-red;
+			color: $eag-white;
+            border-radius: 5px;
+		}
+	}
+}
+
+.shadow {
+	background-color: rgba($eag-black, $alpha: .9);
+}
