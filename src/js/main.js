@@ -9,6 +9,7 @@ window.addEventListener('scroll', function () {
 
 const gallerySlider = document.querySelector('.showreel__gallery-img-box')
 const buttons = document.querySelectorAll('[data-carousel-button]')
+const galleryBox = document.querySelector('.showreel__gallery-img-box')
 
 buttons.forEach(button => {
 	button.addEventListener('click', () => {
@@ -33,6 +34,13 @@ buttons.forEach(button => {
     })
 })
 
+window.addEventListener('resize', () => {
+  let insetWindowWidth = window.innerWidth 
+  let contentWidth =  1600
+  let boxWidth =  insetWindowWidth / contentWidth
+  galleryBox.style.transform =  boxWidth >= 1 ? 'scale(1)' : `scale(${boxWidth})`
+})
+
 
 // Questions accordeon 
 
@@ -53,6 +61,9 @@ function openAccordeonItems() {
 const closeAccordeonItems = () => {
 	const allActiveItems = document.querySelectorAll('.questions__accordeon-info')
 	allActiveItems.forEach(item => item.classList.remove('show-acc'))
+  accordeonBtns.forEach( btn => {
+    btn.classList.remove('active')
+  })
 }
 
 const clickOutsideAccordeon = e => {
