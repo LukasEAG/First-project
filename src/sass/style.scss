@@ -142,6 +142,11 @@ section {
 			color: $eag-white;
 			background-color: rgb(38, 38, 38);
 			border-radius: 5px;
+			transition:  background-color .4s;
+		}
+		& a:hover {
+			
+			background-color: rgb(0, 0, 0);
 		}
 		& span {
 			font-size: 1.6rem;
@@ -170,16 +175,27 @@ section {
 		margin: 0 0.3em;
 		padding: 1em 2em;
 		font-size: 1.5rem;
-		color: $eag-white;
 		border-radius: 8px;
 		border: none;
 		cursor: pointer;
+		transition: background-color 0.4s;
 
 		&--works {
 			background-color: $eag-blue;
 		}
 		&--contact {
 			background-color: $eag-red;
+		}
+
+		& a {
+			color: $eag-white;
+			transition: color .4s;
+		}
+	}
+	&__btn:hover {
+		background-color: $eag-white;
+		& a {
+			color: $eag-black;
 		}
 	}
 }
@@ -494,7 +510,6 @@ section {
 		align-items: center;
 		margin-top: 2em;
 		height: auto;
-		
 	}
 
 	&__title {
@@ -1202,8 +1217,13 @@ section {
 		background-color: $eag-red;
 		color: $eag-white;
 		border-radius: 8px;
+		transition: background-color .4s, color .4s;
 		border: none;
 		cursor: pointer;
+	}
+	&__form-btn:hover {
+		background-color: $eag-white;
+		color: $eag-black;
 	}
 
 	&__gradient {
@@ -1227,5 +1247,4 @@ section {
 		content: '';
 	}
 }
-
 

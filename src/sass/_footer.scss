@@ -52,16 +52,30 @@
 			font-size: 1.4rem;
 			color: $eag-white;
 			border-radius: 8px;
+			transition: background-color 0.4s, color 0.4s;
 
 			& i {
 				font-size: 2.2rem;
 			}
 		}
 	}
+	&__menu-item:hover {
+		& a {
+			color: $eag-black;
+			background-color: $eag-white;
+		}
+	}
 
 	&__menu-item:first-child {
 		& a {
 			background-color: $eag-blue;
+			transition: background-color 0.4s, color 0.4s;
+		}
+	}
+	&__menu-item:first-child:hover {
+		& a {
+			color: $eag-black;
+			background-color: $eag-white;
 		}
 	}
 	&__menu-item:last-child {
@@ -69,6 +83,16 @@
 			padding: 0.4em;
 			background-color: $eag-red;
 			border-radius: 8px;
+			transition: background-color 0.4s, color 0.4s;
+		}
+	}
+	&__menu-item:last-child:hover {
+		& a {
+			background-color: transparent;
+		}
+		& i {
+			background-color: $eag-white;
+			color: $eag-black;
 		}
 	}
 
@@ -86,13 +110,22 @@
 			background: linear-gradient(180deg, rgba(36, 36, 36, 1) 5%, rgba(36, 36, 36, 0) 100%);
 			color: $eag-red;
 			border-radius: 8px;
+			transition: background-color .4s, color .4s;
+		}
+
+		& i:hover {
+			background: transparent;
+			background-color: $eag-white;
+			color: $eag-black;
+		
 		}
 	}
+	
 
 	&__box-foot {
 		display: flex;
 		justify-content: space-between;
-        align-items: center;
+		align-items: center;
 		padding: 4em 0;
 		width: 100%;
 
@@ -103,25 +136,25 @@
 	}
 
 	&__foot-data {
-        display: flex;
-        align-items: center;
+		display: flex;
+		align-items: center;
 		font-size: 1.4rem;
-        gap: 1.2em;
+		gap: 1.2em;
 
-        & i {
-            padding-right: 0.3em;
-            font-size: 2rem;
-            vertical-align: middle;
-            color: $eag-red;
-        }
+		& i {
+			padding-right: 0.3em;
+			font-size: 2rem;
+			vertical-align: middle;
+			color: $eag-red;
+		}
 	}
 
 	&__foot-link {
 		font-size: 1.4rem;
 		color: $eag-white;
 
-        & a {
-            color: $eag-red;
-        }
+		& a {
+			color: $eag-red;
+		}
 	}
 }

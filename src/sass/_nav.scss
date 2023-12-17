@@ -39,17 +39,37 @@
 		font-size: 1.6rem;
 		font-weight: 400;
 		list-style: none;
+		border-radius: 5px;
+		background-color: transparent;
+		transition: background-color .4s, color .4s;
+
 
 		& a {
             display: block;
             padding: 0.6em 1.5em;
 			text-transform: uppercase;
 			color: $eag-white;
+			transition: background-color .4s, color .4s;
+		}
+	}
+
+	&__menu-item:hover {
+		background: $eag-white;
+
+		& a { 
+			color: $eag-black;
 		}
 	}
 	&__menu-item:first-child {
-		border-radius: 5px;
 		background-color: $eag-blue;
+		transition: background-color .4s, color .4s;
+	}
+	&__menu-item:first-child:hover {
+		background-color: $eag-white;
+
+		& a {
+			color: $eag-black;
+		}
 	}
 
 	&__more-btns {
@@ -64,6 +84,12 @@
             background-color: $eag-red;
 			color: $eag-white;
             border-radius: 5px;
+			transition: background-color .4s, color .4s;
+		}
+
+		& i:hover {
+			color: $eag-black;
+			background-color: $eag-white;
 		}
 	}
 }
