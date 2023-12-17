@@ -92,37 +92,38 @@ const toSlider = document.querySelector('#toSlider');
 const fromInput = document.querySelector('#fromInput');
 const toInput = document.querySelector('#toInput');
 
-function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
-    const [from, to] = getParsed(fromInput, toInput);
-    fillSlider(fromInput, toInput, '#C6C6C6', '#b60732', controlSlider);
-    if (from > to) {
-        fromSlider.value = to;
-        fromInput.innerText = to + ` zł`;
-    } else {
-        fromSlider.innerText = from + ` zł`;
-    }
-}
+// function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+//     const [from, to] = getParsed(fromInput, toInput);
+//     fillSlider(fromInput, toInput, '#C6C6C6', '#b60732', controlSlider);
+//     if (from > to) {
+//         fromSlider.value = to;
+//         fromInput.innerText = to + ` zł`;
+//     } else {
+//         fromSlider.innerText = from + ` zł`;
+//     }
+   
+// }
     
-function controlToInput(toSlider, fromInput, toInput, controlSlider) {
-    const [from, to] = getParsed(fromInput, toInput);
-    fillSlider(fromInput, toInput, '#C6C6C6', '#b60732', controlSlider);
-    setToggleAccessible(toInput);
-    if (from <= to) {
-        toSlider.value = to;
-        toInput.innerText = to + ` zł`;
-    } else {
-        toInput.innerText = from + ` zł`;
-    }
-}
+// function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+//     const [from, to] = getParsed(fromInput, toInput);
+//     fillSlider(fromInput, toInput, '#C6C6C6', '#b60732', controlSlider);
+//     setToggleAccessible(toInput);
+//     if (from <= to) {
+//         toSlider.value = to;
+//         toInput.innerText = to + ` zł`;
+//     } else {
+//         toInput.innerText = from + ` zł`;
+//     }
+// }
 
 function controlFromSlider(fromSlider, toSlider, fromInput) {
   const [from, to] = getParsed(fromSlider, toSlider);
   fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider);
   if (from > to) {
     fromSlider.value = to;
-    fromInput.innerText = to + ` zł`;
+    fromInput.innerText = `${to} zł`;
   } else {
-    fromInput.innerText = from + ` zł`;
+    fromInput.innerText = `${from} zł`;
   }
 }
 
@@ -132,9 +133,9 @@ function controlToSlider(fromSlider, toSlider, toInput) {
   setToggleAccessible(toSlider);
   if (from <= to) {
     toSlider.value = to;
-    toInput.innerText = to + ` zł`;
+    toInput.innerText = `${to} zł`;
   } else {
-    toInput.innerText = from + ` zł`;
+    toInput.innerText = `${from} zł`;
     toSlider.value = from;
   }
 }
@@ -174,8 +175,8 @@ setToggleAccessible(toSlider);
 
 fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
 toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
-fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
-toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+// fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+// toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
 
 
 
