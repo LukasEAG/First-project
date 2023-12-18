@@ -1,5 +1,9 @@
 @use '../sass/colors' as *;
 
+footer {
+	background-color: $eag-black;
+}
+
 .footer {
 	position: relative;
 	width: 100%;

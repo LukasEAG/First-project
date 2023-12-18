@@ -10,12 +10,14 @@
 
 	&__navbar {
 		display: flex;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
         height: 85px;
 	}
 
 	&__logo {
+		display: flex;
+		justify-content: center;
 		width: 20%;
 
 		& img {
