@@ -36,15 +36,15 @@ section {
 	margin: 0;
 	background-color: $eag-black;
 }
-.offer,
-.news,
-.showreel,
-.questions,
-.about-us,
-.why-us,
-.contact {
-	min-height: 100vh;
-}
+// .offer,
+// .news,
+// .showreel,
+// .questions,
+// .about-us,
+// .why-us,
+// .contact {
+// 	min-height: 100vh;
+// }
 
 
 .header {
@@ -418,8 +418,7 @@ section {
 	overflow-x: hidden;
 
 	&__box {
-		margin-top: 10em;
-		padding: 0 8em;
+		padding: 9em 8em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -485,7 +484,7 @@ section {
 	}
 
 	&__gradient {
-		position: absolute;
+		position: relative;
 		bottom: 0;
 		left: 0;
 		width: 100%;
