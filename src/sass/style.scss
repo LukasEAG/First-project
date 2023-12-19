@@ -46,6 +46,7 @@ section {
 	min-height: 100vh;
 }
 
+
 .header {
 	position: relative;
 	display: flex;
@@ -658,6 +659,7 @@ section {
 	background-size: cover;
 	background-position: center;
 	overflow-x: hidden;
+	max-height: 890px;
 
 	&__box {
 		display: flex;
