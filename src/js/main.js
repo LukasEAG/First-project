@@ -1,9 +1,9 @@
 //Navbar 
-const nav = document.querySelector('.nav')
+// const nav = document.querySelector('.nav')
 
-window.addEventListener('scroll', function () {
-	window.pageYOffset > 85 ? nav.classList.add('shadow') : nav.classList.remove('shadow')
-})
+// window.addEventListener('scroll', function () {
+// 	window.pageYOffset > 85 ? nav.classList.add('shadow') : nav.classList.remove('shadow')
+// })
 
 // Gallery carousel
 
