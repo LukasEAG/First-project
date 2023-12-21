@@ -1,9 +1,21 @@
 //Navbar 
-// const nav = document.querySelector('.nav')
 
-// window.addEventListener('scroll', function () {
-// 	window.pageYOffset > 85 ? nav.classList.add('shadow') : nav.classList.remove('shadow')
-// })
+const menuOpenBtn = document.querySelector('.nav__mobile-menu-btn--open')
+const menuCloseBtn = document.querySelector('.nav__mobile-menu-btn--close')
+const mobileMenu = document.querySelector('.nav__menu')
+
+menuOpenBtn.addEventListener('click', () => {
+
+  mobileMenu.classList.add('active')
+  menuOpenBtn.classList.add('hide-btn')
+  menuCloseBtn.classList.add('show-btn')
+})
+
+menuCloseBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('active')
+  menuOpenBtn.classList.remove('hide-btn')
+  menuCloseBtn.classList.remove('show-btn')
+})
 
 // Gallery carousel
 

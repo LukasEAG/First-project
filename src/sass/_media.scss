@@ -1,0 +1,101 @@
+@use '../sass/colors' as *;
+
+@mixin queries {
+    @media (max-width: 992px){
+        .offer {
+            &__title-text{
+                & h2 {
+                    font-size: 7rem;
+                }
+            }
+            &__title-span{
+                & span {
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    }
+	@media (max-width: 769px) {
+		.header {
+			&__title {
+				& h1 {
+					font-size: 2.6rem;
+				}
+
+				& span {
+					font-size: 1.4rem;
+				}
+			}
+			&__items {
+				display: none;
+			}
+		}
+        .offer {
+            &__title-text{
+                & h2 {
+                    font-size: 6rem;
+                }
+                & span {
+                    font-size: 3.2rem;
+                }
+                & p {
+                    font-size: 1.4rem;
+                }
+
+                & i {
+                    font-size: 2.6rem;
+                }
+            }
+            &__title-span{
+                & span {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+	}
+
+    @media (max-width: 568px) {
+        .offer {
+            &__title-text{
+                & h2 {
+                    font-size: 4rem;
+                }
+                & span {
+                    font-size: 2.2rem;
+                }
+                & p {
+                    font-size: 1.2rem;
+                }
+
+                & i {
+                    font-size: 2rem;
+                }
+            }
+            &__title-span{
+                & span {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+	@media (max-width: 378px) {
+		.header {
+			&__title {
+				& h1 {
+					font-size: 2rem;
+				}
+
+				& span {
+					font-size: 1.2rem;
+				}
+			}
+			&__items {
+				display: none;
+			}
+
+			&__btn {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
