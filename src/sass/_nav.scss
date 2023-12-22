@@ -135,7 +135,9 @@
 @media (max-width: 1200px) {
 	.nav {
 
-
+		&__logo {
+			margin-left: 1em;
+		}
 		&__menu-item {
 			& a {
 				padding: 0.6em 1em;
@@ -148,7 +150,6 @@
 @media (max-width: 992px) {
 	.nav {
 		&__logo {
-			margin-left: 2em;
 			justify-content: start;
 			width: 85%;
 		}

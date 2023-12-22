@@ -203,7 +203,7 @@ section {
 	&__title-section {
 		position: relative;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 		width: 100%;
 		height: 100%;
@@ -214,7 +214,6 @@ section {
 
 	&__title-text {
 		position: relative;
-		margin-left: auto;
 		width: auto;
 
 		& i {
@@ -228,7 +227,7 @@ section {
 
 		& h2 {
 			margin-bottom: -0.3em;
-			font-size: 8rem;
+			font-size: 10rem;
 			text-transform: uppercase;
 			letter-spacing: -5px;
 		}
@@ -305,21 +304,21 @@ section {
 	// 	}
 	// }
 
-	&__content-cards {
-		position: absolute;
-		display: flex;
-		width: 100%;
-		height: calc(100% - 80px);
-	}
+	// &__content-cards {
+	// 	position: absolute;
+	// 	display: flex;
+	// 	width: 100%;
+	// 	height: calc(100% - 80px);
+	// }
 
-	&__content-cards::after {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(87, 87, 87, 0.3);
-		content: '';
-	}
+	// &__content-cards::after {
+	// 	position: absolute;
+	// 	inset: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	background-color: rgba(87, 87, 87, 0.3);
+	// 	content: '';
+	// }
 
 	// &__content-card-box {
 	//     position: relative;
@@ -503,14 +502,16 @@ section {
 
 .showreel {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	display: block;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
 	overflow-x: hidden;
 
 	&__container {
-		margin-bottom: 80px;
+		position: relative;
+		top: 0;
+		left: 0;
 		height: auto;
 		width: 100%;
 	}
@@ -529,7 +530,7 @@ section {
 		display: flex;
 		align-items: center;
 		max-width: fit-content;
-		margin: 0 auto;
+		margin: 0 auto ;
 		& h2 {
 			font-size: 7rem;
 			letter-spacing: -3px;
@@ -562,22 +563,17 @@ section {
 		perspective: 1400px;
 		max-width: 1400px;
 		width: 100%;
-		height: 100%;
-		min-height: 60em;
+		height: calc((100vw) * (585/1400));
+	
 
-		& img {
-			display: block;
-			width: auto;
-			height: 100%;
-			max-height: 476px;
-		}
+	
 	}
 
 	&__gallery-btn {
 		position: absolute;
 		display: flex;
 		justify-content: space-between;
-		max-width: 846px;
+		max-width: 990px;
 		width: 100%;
 		top: 50%;
 		left: 50%;
@@ -585,61 +581,69 @@ section {
 		transform: translate(-50%, 0);
 
 		&--prev {
-			margin-left: 10px;
+			margin-left: 1em;
 		}
 		&--next {
-			margin-right: 10px;
+			margin-right: 1em;
 		}
 
 		& button {
-			padding: 1em;
-			font-size: 1.6rem;
+			padding: 1em 1.3em;
+			font-size: 1.8rem;
 			background-color: $eag-red;
 			color: $eag-white;
+			border-radius: 50%;
 			border: none;
+
 			cursor: pointer;
 		}
 	}
 
-	.position {
+	&__position {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		max-width: 846px;
-		max-height: 476px;
+		max-width: 1000px;
+		max-height: 563px;
 		width: 100%;
-		height: 100%;
+		height: auto;
 		transition: all 0.39s ease-in-out;
+
+		& img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
 
-	.position[data-slide-0] {
-		transform: translate3d(-680px, -50%, 0px) scale(0.85) rotateY(70deg);
+	&__position[data-slide-0] {
+		transform: translate3d(-780px, -50%, 0px) scale(0.85) rotateY(70deg);
 		transform-origin: center left;
 		z-index: 8;
 	}
-	.position[data-slide-1] {
-		transform: translate3d(-560px, -50%, 0px) scale(0.9) rotateY(70deg);
+	&__position[data-slide-1] {
+		transform: translate3d(-670px, -50%, 0px) scale(0.9) rotateY(70deg);
 		transform-origin: center left;
 		z-index: 9;
 	}
-	.position[data-slide-2] {
+	&__position[data-slide-2] {
 		transform: translate3d(-50%, -50%, 0px) scale(1) rotateY(0deg);
 		transform-origin: center center;
 		z-index: 10;
 	}
-	.position[data-slide-3] {
-		transform: translate3d(-245px, -50%, 0px) scale(0.9) rotateY(-70deg);
+	&__position[data-slide-3] {
+		transform: translate3d(-335px, -50%, 0px) scale(0.9) rotateY(-70deg);
 		transform-origin: center right;
 		z-index: 9;
 	}
-	.position[data-slide-4] {
-		transform: translate3d(-165px, -50%, 0px) scale(0.85) rotateY(-70deg);
+	&__position[data-slide-4] {
+		transform: translate3d(-225px, -50%, 0px) scale(0.85) rotateY(-70deg);
 		transform-origin: center right;
 		z-index: 8;
 	}
 
 	&__gradient-bar {
-		position: absolute;
+		position: relative;
 		display: block;
 		bottom: 0;
 		left: 0;
@@ -666,7 +670,7 @@ section {
 	background-size: cover;
 	background-position: center;
 	overflow-x: hidden;
-	max-height: 890px;
+	max-height: 1150px;
 
 	&__box {
 		display: flex;
@@ -692,6 +696,7 @@ section {
 	&__box-lists {
 		display: flex;
 		justify-content: center;
+		padding-bottom: 6em;
 		width: 100%;
 	}
 
@@ -699,6 +704,7 @@ section {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 4.5em;
 		width: 50%;
 
 		& span {
@@ -708,7 +714,6 @@ section {
 
 	&__accordeon-box-content {
 		margin-top: 2.6em;
-		min-height: 100px;
 
 		& span {
 			font-size: 1.8rem;
@@ -751,8 +756,6 @@ section {
 
 	&__accordeon-info-text {
 		// display: none;
-		min-width: 500px;
-		margin-top: -2em;
 		margin-bottom: 2em;
 		font-size: 1.4rem;
 		color: $eag-white;
