@@ -645,6 +645,10 @@ section {
 		content: '';
 		z-index: 2;
 	}
+
+	&__carousel-mobile {
+		display: none;
+	}
 }
 
 .questions {

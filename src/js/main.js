@@ -51,6 +51,42 @@ buttons.forEach(button => {
 	})
 })
 
+
+const showRellMobileBtns = document.querySelectorAll('[data-show-btn]')
+const nextBtn = document.querySelector('[data-show-btn="next"]')
+const prevBtn = document.querySelector('[data-show-btn="prev"]')
+
+showRellMobileBtns.forEach(button => {
+	button.addEventListener('click', () => {
+		let counter = button.dataset.showBtn === 'next' ? 1 : -1
+
+		const imgList = button.closest('[data-carousel]').querySelector('[data-carousel-imgs]')
+
+		const activeImg = imgList.querySelector('[data-active]')
+
+		let newActiveImg = newActiveImg = [...imgList.children].indexOf(activeImg) + counter
+
+		
+		if (newActiveImg < 0)  newActiveImg = imgList.children.length - 1;
+		if (newActiveImg >=  imgList.children.length ) newActiveImg = 0;
+			
+
+		imgList.children[newActiveImg].dataset.active = true
+		delete activeImg.dataset.active
+
+	
+		
+
+		// console.log(nextBtn)
+
+		// newActiveImg >= imgList.children.length - 1
+		// 	? nextBtn.classList.add('noactvie')
+		// 	: nextBtn.classList.remove('noactvie')
+
+		// newActiveImg > 0 ? prevBtn.classList.add('actvie') : prevBtn.classList.remove('actvie')
+	})
+})
+
 window.addEventListener('resize', () => {
 	let insetWindowWidth = window.innerWidth
 	let contentWidth = 1600
