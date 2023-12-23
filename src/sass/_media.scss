@@ -132,6 +132,14 @@
 			}
 		}
 
+		.about-us {
+
+			&__gradient-bar {
+				top: -3em;
+				height: 6em;
+			}
+		}
+
 		.contact {
 
 			&__gradient {
@@ -193,7 +201,7 @@
 	@media (max-width: 669px) {
 		.questions {
 			&__box {
-				margin: 2em 4em;
+				margin: 2em 4em 4em;
 			}
 
 			&__title {
@@ -295,6 +303,13 @@
 				margin-bottom: 1em;
 			}
 		}
+		.about-us {
+
+			&__gradient-bar {
+				top: -2em;
+				height: 4em;
+			}
+		}
 
 		.contact {
 
@@ -349,7 +364,7 @@
 		}
 		.questions {
 			&__box {
-				margin: 2em 1em;
+				margin: 2em 1em 3em;
 			}
 
 			&__accordeon-box-content {
