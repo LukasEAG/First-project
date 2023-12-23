@@ -163,6 +163,49 @@
 	}
 
 	@media (max-width: 450px) {
+		.offer {
+			margin: 0 1em;
+		}
+
+				.news {
+			&__box {
+				padding: 3em 1em;
+			}
+
+			&__title {
+				& h2 {
+					font-size: 5rem;
+				}
+			}
+
+			&__content-text {
+				width: 90%;
+
+				& span {
+					font-size: 1.6rem;
+				}
+
+				& li {
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+
+		.showreel {
+			&__title-box {
+				& i {
+					font-size: 2rem;
+				}
+				& h2 {
+					font-size: 4rem;
+				}
+
+				& span {
+					font-size: 1.4rem;
+				}
+			}
+		}
 		.questions {
 			&__box {
 				margin: 2em 1em;
@@ -178,90 +221,6 @@
 			&__accordeon-btn {
 				margin-left: 0.3em;
 				font-size: 1.9rem;
-			}
-		}
-	}
-	@media (max-width: 378px) {
-		.header {
-           
-			&__title {
-				& h1 {
-					font-size: 2rem;
-				}
-
-				& span {
-					font-size: 1.2rem;
-				}
-			}
-			&__items {
-				display: none;
-			}
-
-			&__btn {
-				font-size: 1.2rem;
-			}
-		}
-
-        .offer {
-            margin: 0 1em;
-        }
-
-        .news {
-            &__box {
-                padding: 3em 1em;
-            }
-
-            &__title {
-                & h2 {
-                    font-size: 5rem;
-                }
-            }
-
-            &__content-text {
-                width: 90%;
-
-                & span {
-                    font-size: 1.6rem;
-                }
-
-                & li {
-                    font-size: 1.6rem;
-                }
-            }
-        }
-
-        .showreel {
-
-            &__title-box {
-
-                & i {
-                     font-size: 2rem;
-                }
-                & h2 {
-                    font-size: 4rem;
-                }
-
-                & span {
-                    font-size: 1.4rem;
-                }
-            }
-        }
-
-		.questions {
-			&__title {
-				& h2 {
-					font-size: 3rem;
-				}
-			}
-
-			&__accordeon-box-content {
-				& span {
-					font-size: 1.2rem;
-				}
-			}
-
-			&__accordeon-info {
-				max-width: 320px;
 			}
 		}
 
@@ -308,7 +267,7 @@
 			}
 
 			&__title {
-                margin: 3em 1em 0 0;
+				margin: 3em 1em 0 0;
 				& h2 {
 					font-size: 3rem;
 				}
@@ -318,100 +277,136 @@
 				}
 			}
 
-            &__content {
-                flex-wrap: wrap;
-            }
+			&__content {
+				flex-wrap: wrap;
+			}
 
-            &__content-items {
-                flex: 100%;
-            }
+			&__content-items {
+				flex: 100%;
+			}
 
-            &__content-item {
-                padding: 3em 1em 2em;
-                // min-height: 250px;
+			&__content-item {
+				padding: 3em 1em 2em;
+				// min-height: 250px;
 
-                & i {
-                    font-size: 2rem;
-                }
+				& i {
+					font-size: 2rem;
+				}
 
-                & p {
-                    font-size: 1.4rem;
-                }
-            }
+				& p {
+					font-size: 1.4rem;
+				}
+			}
 		}
 
-        .contact {
+		.contact {
+			&__title {
+				& h2 {
+					font-size: 3rem;
+				}
 
-            &__title {
+				& span {
+					font-size: 1.8rem;
+				}
+			}
 
-                & h2 {
-                    font-size: 3rem;
-                }
+			&__form {
+				margin-top: 3em;
+			}
 
-                & span {
-                    font-size: 1.8rem;
-                }
-            }
+			&__form-row {
+				flex-direction: column;
+				gap: 1em;
+				margin: 0 1em;
+			}
 
-            &__form {
+			&__form-row-item {
+				padding: 1em;
+				max-width: none;
+			}
 
-                margin-top: 3em;
-            }
+			&__form-checkbox {
+				margin: 4em 1em 0;
+				padding: 1em;
+				max-height: 280px;
+				max-width: none;
+				width: auto;
+			}
 
-            &__form-row {
-                flex-direction: column;
-                gap: 1em;
-                margin: 0 1em;
-            }
+			&__form-checkbox-row {
+				flex-direction: column;
+				margin-bottom: 0;
+			}
 
-            &__form-row-item {
-                padding: 1em;
-            }
+			&__form-checkbox-item {
+				margin-bottom: 3em;
+				width: 100%;
+			}
 
-            &__form-checkbox {
-                margin: 4em 1em 0;
-                padding: 1em;
-                max-height: 280px;
-                max-width: none;
-                width: auto;
-            }
+			&__form-slider {
+				margin: 4em 1em 0;
+				padding: 1em;
+				max-width: none;
+				width: auto;
 
-            &__form-checkbox-row {
-                flex-direction: column;
-                margin-bottom: 0;
-            }
+				& label {
+					font-size: 1.2rem;
+				}
+			}
 
-            &__form-checkbox-item{
-                margin-bottom: 3em;
-                width: 100%;
-            }
+			&__form-msg {
+				margin: 4em 1em 0;
+				padding: 1em;
+				max-width: none;
+				width: auto;
+			}
 
-            &__form-slider{
-                margin: 4em 1em 0;
-                padding: 1em;
-                max-width: none;
-                width: auto;
+			&__form-btns {
+				margin: 2em auto;
+			}
+			&__form-btn {
+				display: block;
+				margin: 2em auto;
+				width: 100%;
+			}
+		}
+	}
+	@media (max-width: 378px) {
+		.header {
+			&__title {
+				& h1 {
+					font-size: 2rem;
+				}
 
-                & label {
-                    font-size: 1.2rem;
-                }
-            }
+				& span {
+					font-size: 1.2rem;
+				}
+			}
+			&__items {
+				display: none;
+			}
 
-            &__form-msg {
-                margin: 4em 1em 0;
-                padding: 1em;
-                max-width: none;
-                width: auto;
-            }
+			&__btn {
+				font-size: 1.2rem;
+			}
+		}
 
-            &__form-btns {
-                margin: 2em auto;
-            }
-            &__form-btn {
-                display: block;
-                margin: 2em auto;
-                width: 100%;
-            }
-        }
+		.questions {
+			&__title {
+				& h2 {
+					font-size: 3rem;
+				}
+			}
+
+			&__accordeon-box-content {
+				& span {
+					font-size: 1.2rem;
+				}
+			}
+
+			&__accordeon-info {
+				max-width: 320px;
+			}
+		}
 	}
 }
