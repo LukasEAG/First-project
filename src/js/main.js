@@ -1,26 +1,26 @@
 //Navbar
 
-const menuOpenBtn = document.querySelector('.nav__mobile-menu-btn--open')
+const menuOpenBtns = document.querySelectorAll('.nav__mobile-menu-btn--open')
 const menuCloseBtn = document.querySelector('.nav__mobile-menu-btn--close')
 const mobileMenu = document.querySelector('.nav__menu')
 const menuItems = document.querySelectorAll('.nav__menu-item')
 
-menuOpenBtn.addEventListener('click', () => {
+menuOpenBtns.forEach(btn =>  btn.addEventListener('click', () => {
 	mobileMenu.classList.add('active')
-	menuOpenBtn.classList.add('hide-btn')
+	btn.classList.add('hide-btn')
 	menuCloseBtn.classList.add('show-btn')
-})
+}))
 
 menuCloseBtn.addEventListener('click', () => {
 	mobileMenu.classList.remove('active')
-	menuOpenBtn.classList.remove('hide-btn')
+	menuOpenBtns.forEach(btn => btn.classList.remove('hide-btn'))
 	menuCloseBtn.classList.remove('show-btn')
 })
 
 menuItems.forEach(item => {
 	item.addEventListener('click', () => {
 		mobileMenu.classList.remove('active')
-		menuOpenBtn.classList.remove('hide-btn')
+		menuOpenBtns.forEach(btn => btn.classList.remove('hide-btn'))
 		menuCloseBtn.classList.remove('show-btn')
 	})
 })
