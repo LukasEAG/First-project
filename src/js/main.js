@@ -25,6 +25,18 @@ menuItems.forEach(item => {
 	})
 })
 
+// Multilanguage 
+
+const multiLangBtns = document.querySelectorAll('.nav__more-lang-btn')
+const langList = document.querySelector('.nav__lang-list')
+
+multiLangBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+	langList.classList.toggle('active-lang')
+	btn.classList.toggle('hover-lang')
+})
+})
+
 // Gallery carousel
 
 const gallerySlider = document.querySelector('.showreel__gallery-img-box')
