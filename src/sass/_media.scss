@@ -1,56 +1,47 @@
 @use '../sass/colors' as *;
 
-
 @mixin queries {
+	@media (max-width: 1300px) {
+		.questions {
+			&__accordeon-box-content {
+				& i {
+					font-size: 2.4rem;
+				}
+			}
+			&__accordeon-btn {
+				margin-left: 1em;
+			}
+		}
+	}
 
-    @media(max-width: 1300px) {
-    
-        .questions{
+	@media (max-width: 1150px) {
+		.questions {
+			&__box-lists {
+				flex-wrap: wrap;
+				gap: 2em;
+			}
 
-            
-            &__accordeon-box-content {
+			&__accordeon-box {
+				gap: 2em;
+				flex: 100%;
+			}
+		}
+	}
 
-                & i {
-
-                    font-size: 2.4rem;
-                }
-
-            }
-            &__accordeon-btn {
-                margin-left: 1em;
-            }
-        }    
-    }
-
-    @media(max-width: 1150px) {
-        .questions {
-
-            &__box-lists {
-                flex-wrap: wrap;
-                gap: 2em;
-            }
-
-            &__accordeon-box {
-                gap: 2em;
-                flex: 100%;
-            }
-        }
-    }
-
-    @media (max-width: 992px){
-        .offer {
-            &__title-text{
-                & h2 {
-                    font-size: 7rem;
-                }
-            }
-            &__title-span{
-                & span {
-                    font-size: 2.8rem;
-                }
-            }
-        }
-    }
+	@media (max-width: 992px) {
+		.offer {
+			&__title-text {
+				& h2 {
+					font-size: 7rem;
+				}
+			}
+			&__title-span {
+				& span {
+					font-size: 2.8rem;
+				}
+			}
+		}
+	}
 	@media (max-width: 769px) {
 		.header {
 			&__title {
@@ -66,143 +57,133 @@
 				display: none;
 			}
 		}
-        .offer {
-            &__title-text{
-                & h2 {
-                    font-size: 6rem;
-                }
-                & span {
-                    font-size: 3.2rem;
-                }
-                & p {
-                    font-size: 1.4rem;
-                }
+		.offer {
+			&__title-text {
+				& h2 {
+					font-size: 6rem;
+				}
+				& span {
+					font-size: 3.2rem;
+				}
+				& p {
+					font-size: 1.4rem;
+				}
 
-                & i {
-                    font-size: 2.6rem;
-                }
-            }
-            &__title-span{
-                & span {
-                    font-size: 2.4rem;
-                }
-            }
-        }
+				& i {
+					font-size: 2.6rem;
+				}
+			}
+			&__title-span {
+				& span {
+					font-size: 2.4rem;
+				}
+			}
+		}
 	}
 
-    @media(max-width: 669px) {
+	@media (max-width: 669px) {
+		.questions {
+			&__box {
+				margin: 2em 4em;
+			}
 
-        .questions{
+			&__title {
+				& h2 {
+					font-size: 3.6rem;
+				}
+			}
 
-            &__box {
-                margin: 2em 4em;
-            }
+			&__box-lists {
+				gap: 1em;
+			}
 
-            &__title {
+			&__accordeon-box {
+				gap: 1em;
+			}
 
-                & h2 {
-                    font-size: 3.6rem;
-                }
-            }
+			&__accordeon-box-content {
+				& i {
+					font-size: 1.8rem;
+				}
+			}
+			&__accordeon-btn {
+				margin-left: 0.5em;
+			}
+		}
+	}
 
-            &__box-lists {
-                gap: 1em;
-            }
+	@media (max-width: 568px) {
+		.offer {
+			&__title-text {
+				& h2 {
+					font-size: 4rem;
+				}
+				& span {
+					font-size: 2.2rem;
+				}
+				& p {
+					font-size: 1.2rem;
+				}
 
-            &__accordeon-box {
-                gap: 1em;
-            }
-            
-            &__accordeon-box-content {
+				& i {
+					font-size: 2rem;
+				}
+			}
+			&__title-span {
+				& span {
+					font-size: 1.6rem;
+				}
+			}
+		}
 
-                & i {
+		.questions {
+			background-position: 65%;
 
-                    font-size: 1.8rem;
-                }
+			&__title {
+				margin: 2em 2.6em;
+			}
 
-            }
-            &__accordeon-btn {
-                margin-left: .5em;
-            }
-        }    
-    }
-    
+			&__accordeon-box-content {
+				& span {
+					font-size: 1.4rem;
+				}
+			}
 
-    @media (max-width: 568px) {
-        .offer {
-            &__title-text{
-                & h2 {
-                    font-size: 4rem;
-                }
-                & span {
-                    font-size: 2.2rem;
-                }
-                & p {
-                    font-size: 1.2rem;
-                }
+			&__accordeon-btn {
+				font-size: 2.4rem;
+			}
 
-                & i {
-                    font-size: 2rem;
-                }
-            }
-            &__title-span{
-                & span {
-                    font-size: 1.6rem;
-                }
-            }
-        }
+			&__accordeon-info {
+				max-width: 340px;
+			}
+			&__accordeon-info-text {
+				margin-bottom: 1em;
+			}
+		}
+	}
 
-        .questions{
+	@media (max-width: 450px) {
+		.questions {
+			&__box {
+				margin: 2em 1em;
+			}
 
-            &__title {
-                margin: 2em 2.6em;
-            }
+			&__accordeon-box-content {
+				& i {
+					margin-right: 0.3em;
+					font-size: 1.6rem;
+				}
+			}
 
-            &__accordeon-box-content {
-
-                & span {
-                    font-size: 1.4rem;
-                }
-            }
-
-            &__accordeon-btn {
-                font-size: 2.4rem;
-            }
-
-            &__accordeon-info{
-                max-width: 340px;
-
-            }
-            &__accordeon-info-text{
-                margin-bottom: 1em;
-            }
-        }
-    }
-
-    @media(max-width: 450px) {
-        .questions{
-
-            &__box {
-                margin: 2em 1em;
-            }
-
-            &__accordeon-box-content {
-
-                & i {
-                    margin-right: 0.3em;
-                    font-size: 1.6rem;
-                }
-
-            }
-
-            &__accordeon-btn {
-                margin-left: .3em;
-                font-size: 1.9rem;
-            }
-        }
-    }
+			&__accordeon-btn {
+				margin-left: 0.3em;
+				font-size: 1.9rem;
+			}
+		}
+	}
 	@media (max-width: 378px) {
 		.header {
+           
 			&__title {
 				& h1 {
 					font-size: 2rem;
@@ -221,10 +202,215 @@
 			}
 		}
 
-        .questions {
-            &__accordeon-info{
-                max-width: 320px;
+        .offer {
+            margin: 0 1em;
+        }
 
+        .news {
+            &__box {
+                padding: 3em 1em;
+            }
+
+            &__title {
+                & h2 {
+                    font-size: 5rem;
+                }
+            }
+
+            &__content-text {
+                width: 90%;
+
+                & span {
+                    font-size: 1.6rem;
+                }
+
+                & li {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .showreel {
+
+            &__title-box {
+
+                & i {
+                     font-size: 2rem;
+                }
+                & h2 {
+                    font-size: 4rem;
+                }
+
+                & span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+		.questions {
+			&__title {
+				& h2 {
+					font-size: 3rem;
+				}
+			}
+
+			&__accordeon-box-content {
+				& span {
+					font-size: 1.2rem;
+				}
+			}
+
+			&__accordeon-info {
+				max-width: 320px;
+			}
+		}
+
+		.about-us {
+			&__box {
+				flex-direction: column;
+				justify-content: center;
+				align-items: stretch;
+				padding: 3em 2em;
+			}
+
+			&__content {
+				width: 100%;
+			}
+
+			&__content-title {
+				text-align: center;
+				& h2 {
+					font-size: 5rem;
+				}
+			}
+
+			&__span-box {
+				& span {
+					font-size: 2rem;
+				}
+
+				& span:last-child {
+					font-size: 1.4rem;
+				}
+			}
+
+			&__content-text {
+				margin: 3em 0 2em;
+				& p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		.why-us {
+			&__box {
+				margin: 0 1em;
+			}
+
+			&__title {
+                margin: 3em 1em 0 0;
+				& h2 {
+					font-size: 3rem;
+				}
+
+				& span {
+					font-size: 2rem;
+				}
+			}
+
+            &__content {
+                flex-wrap: wrap;
+            }
+
+            &__content-items {
+                flex: 100%;
+            }
+
+            &__content-item {
+                padding: 3em 1em 2em;
+                // min-height: 250px;
+
+                & i {
+                    font-size: 2rem;
+                }
+
+                & p {
+                    font-size: 1.4rem;
+                }
+            }
+		}
+
+        .contact {
+
+            &__title {
+
+                & h2 {
+                    font-size: 3rem;
+                }
+
+                & span {
+                    font-size: 1.8rem;
+                }
+            }
+
+            &__form {
+
+                margin-top: 3em;
+            }
+
+            &__form-row {
+                flex-direction: column;
+                gap: 1em;
+                margin: 0 1em;
+            }
+
+            &__form-row-item {
+                padding: 1em;
+            }
+
+            &__form-checkbox {
+                margin: 4em 1em 0;
+                padding: 1em;
+                max-height: 280px;
+                max-width: none;
+                width: auto;
+            }
+
+            &__form-checkbox-row {
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+
+            &__form-checkbox-item{
+                margin-bottom: 3em;
+                width: 100%;
+            }
+
+            &__form-slider{
+                margin: 4em 1em 0;
+                padding: 1em;
+                max-width: none;
+                width: auto;
+
+                & label {
+                    font-size: 1.2rem;
+                }
+            }
+
+            &__form-msg {
+                margin: 4em 1em 0;
+                padding: 1em;
+                max-width: none;
+                width: auto;
+            }
+
+            &__form-btns {
+                margin: 2em auto;
+            }
+            &__form-btn {
+                display: block;
+                margin: 2em auto;
+                width: 100%;
             }
         }
 	}

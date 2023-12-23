@@ -3,6 +3,7 @@
 const menuOpenBtn = document.querySelector('.nav__mobile-menu-btn--open')
 const menuCloseBtn = document.querySelector('.nav__mobile-menu-btn--close')
 const mobileMenu = document.querySelector('.nav__menu')
+const menuItems = document.querySelectorAll('.nav__menu-item')
 
 menuOpenBtn.addEventListener('click', () => {
 	mobileMenu.classList.add('active')
@@ -16,12 +17,19 @@ menuCloseBtn.addEventListener('click', () => {
 	menuCloseBtn.classList.remove('show-btn')
 })
 
+menuItems.forEach(item => {
+	item.addEventListener('click', () => {
+		mobileMenu.classList.remove('active')
+		menuOpenBtn.classList.remove('hide-btn')
+		menuCloseBtn.classList.remove('show-btn')
+	})
+})
+
 // Gallery carousel
 
 const gallerySlider = document.querySelector('.showreel__gallery-img-box')
 const buttons = document.querySelectorAll('[data-carousel-button]')
 const galleryBox = document.querySelector('.showreel__gallery-img-box')
-
 
 buttons.forEach(button => {
 	button.addEventListener('click', () => {
@@ -50,7 +58,7 @@ window.addEventListener('resize', () => {
 	galleryBox.style.transform = boxWidth >= 1 ? 'scale(1)' : `scale(${boxWidth})`
 })
 window.addEventListener('load', () => {
-  let insetWindowWidth = window.innerWidth
+	let insetWindowWidth = window.innerWidth
 	let contentWidth = 1600
 	let boxWidth = insetWindowWidth / contentWidth
 	galleryBox.style.transform = `scale(${boxWidth})`
@@ -65,7 +73,6 @@ function openAccordeonItems() {
 	if (this.nextElementSibling.classList.contains('show-acc')) {
 		this.nextElementSibling.classList.remove('show-acc')
 		this.lastElementChild.classList.remove('active')
-	
 	} else {
 		closeAccordeonItems()
 		this.nextElementSibling.classList.toggle('show-acc')
@@ -82,7 +89,6 @@ const closeAccordeonItems = () => {
 }
 
 const clickOutsideAccordeon = e => {
-	console.log(e.target);
 	if (
 		e.target.classList.contains('target') ||
 		e.target.classList.contains('questions__accordeon-info') ||
