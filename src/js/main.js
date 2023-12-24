@@ -4,17 +4,22 @@ const menuOpenBtns = document.querySelectorAll('.nav__mobile-menu-btn--open')
 const menuCloseBtn = document.querySelector('.nav__mobile-menu-btn--close')
 const mobileMenu = document.querySelector('.nav__menu')
 const menuItems = document.querySelectorAll('.nav__menu-item')
+const body = document.querySelector('body')
 
-menuOpenBtns.forEach(btn =>  btn.addEventListener('click', () => {
-	mobileMenu.classList.add('active')
-	btn.classList.add('hide-btn')
-	menuCloseBtn.classList.add('show-btn')
-}))
+menuOpenBtns.forEach(btn =>
+	btn.addEventListener('click', () => {
+		mobileMenu.classList.add('active')
+		btn.classList.add('hide-btn')
+		menuCloseBtn.classList.add('show-btn')
+		body.classList.add('stop-scrolling')
+	})
+)
 
 menuCloseBtn.addEventListener('click', () => {
 	mobileMenu.classList.remove('active')
 	menuOpenBtns.forEach(btn => btn.classList.remove('hide-btn'))
 	menuCloseBtn.classList.remove('show-btn')
+	body.classList.remove('stop-scrolling')
 })
 
 menuItems.forEach(item => {
@@ -22,20 +27,33 @@ menuItems.forEach(item => {
 		mobileMenu.classList.remove('active')
 		menuOpenBtns.forEach(btn => btn.classList.remove('hide-btn'))
 		menuCloseBtn.classList.remove('show-btn')
+		body.classList.remove('stop-scrolling')
 	})
 })
 
-// Multilanguage 
+// Multilanguage
 
 const multiLangBtns = document.querySelectorAll('.nav__more-lang-btn')
 const langList = document.querySelector('.nav__lang-list')
 
 multiLangBtns.forEach(btn => {
-btn.addEventListener('click', () => {
+	btn.addEventListener('click', () => {
+		langList.classList.toggle('active-lang')
+	})
+})
+
+const closeLang = () => {
 	langList.classList.toggle('active-lang')
-	btn.classList.toggle('hover-lang')
-})
-})
+	
+}
+
+// const closeLangOutside = e => {
+// 	if ( e.target.classList.contains('nav__more-lang-btn')) return
+
+// 	closeLang()
+// }
+
+// window.addEventListener('click', closeLangOutside)
 
 // Gallery carousel
 
@@ -63,7 +81,6 @@ buttons.forEach(button => {
 	})
 })
 
-
 const showRellMobileBtns = document.querySelectorAll('[data-show-btn]')
 const nextBtn = document.querySelector('[data-show-btn="next"]')
 const prevBtn = document.querySelector('[data-show-btn="prev"]')
@@ -76,18 +93,13 @@ showRellMobileBtns.forEach(button => {
 
 		const activeImg = imgList.querySelector('[data-active]')
 
-		let newActiveImg = newActiveImg = [...imgList.children].indexOf(activeImg) + counter
+		let newActiveImg = (newActiveImg = [...imgList.children].indexOf(activeImg) + counter)
 
-		
-		if (newActiveImg < 0)  newActiveImg = imgList.children.length - 1;
-		if (newActiveImg >=  imgList.children.length ) newActiveImg = 0;
-			
+		if (newActiveImg < 0) newActiveImg = imgList.children.length - 1
+		if (newActiveImg >= imgList.children.length) newActiveImg = 0
 
 		imgList.children[newActiveImg].dataset.active = true
 		delete activeImg.dataset.active
-
-	
-		
 
 		// console.log(nextBtn)
 

@@ -36,6 +36,15 @@ section {
 	margin: 0;
 	background-color: $eag-black;
 }
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
+.hover-lang {
+	background-color: $eag-white;
+	color: $eag-black;
+}
 
 .header {
 	position: relative;
