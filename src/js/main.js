@@ -12,7 +12,7 @@ menuOpenBtns.forEach(btn =>
 		btn.classList.add('hide-btn')
 		menuCloseBtn.classList.add('show-btn')
 		body.classList.add('stop-scrolling')
-		langList.classList.toggle('active-lang')
+		langList.classList.remove('active-lang')
 
 	})
 )
