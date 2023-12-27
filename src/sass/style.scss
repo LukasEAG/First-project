@@ -222,6 +222,7 @@ section {
 	&__title-text {
 		position: relative;
 		width: auto;
+		margin-left: 1em;
 
 		& i {
 			display: inline-block;
@@ -914,6 +915,7 @@ section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: 0 0 4em;
 		z-index: 2;
 	}
 

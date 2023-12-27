@@ -257,13 +257,45 @@
 			}
 		}
 		.news {
+			&__box {
+				padding: 3em 1em;
+			}
 
+			&__title {
+				& h2 {
+					font-size: 5rem;
+				}
+			}
+
+			&__content-text {
+				width: 90%;
+
+				& span {
+					font-size: 1.6rem;
+				}
+
+				& li {
+					font-size: 1.6rem;
+				}
+			}
 			&__gradient {
 				height: 4em;
 			}
 		}
 
 		.showreel {
+			&__title-box {
+				& h2 {
+					font-size: 5rem;
+				}
+				& i {
+					font-size: 2.2rem;
+				}
+
+				& span {
+					font-size: 1.6rem;
+				}
+			}
 			&__carousel-mobile {
 	
 				& i {
@@ -304,116 +336,54 @@
 			}
 		}
 		.about-us {
-
-			&__gradient-bar {
-				top: -2em;
-				height: 4em;
-			}
-		}
-
-		.contact {
-
-			&__gradient {
-				height: 4em;
-			}
-		}
-	}
-
-	@media (max-width: 450px) {
-		.offer {
-			margin: 0 1em;
-		}
-
-		.news {
 			&__box {
-				padding: 3em 1em;
-			}
-
-			&__title {
-				& h2 {
-					font-size: 5rem;
-				}
-			}
-
-			&__content-text {
-				width: 90%;
-
-				& span {
-					font-size: 1.6rem;
-				}
-
-				& li {
-					font-size: 1.6rem;
-				}
-			}
-		}
-
-		.showreel {
-			&__title-box {
-				& i {
-					font-size: 2rem;
-				}
-				& h2 {
-					font-size: 4rem;
-				}
-
-				& span {
-					font-size: 1.4rem;
-				}
-			}
-		}
-		.questions {
-			&__box {
-				margin: 2em 1em 3em;
-			}
-
-			&__accordeon-box-content {
-				& i {
-					margin-right: 0.3em;
-					font-size: 1.6rem;
-				}
-			}
-
-			&__accordeon-btn {
-				margin-left: 0.3em;
-				font-size: 1.9rem;
-			}
-		}
-
-		.about-us {
-			&__box {
-				flex-direction: column;
-				justify-content: center;
-				align-items: stretch;
+				display: block;
+				position: relative;
+				// flex-direction: column;
+				// justify-content: center;
+				// align-items: stretch;
 				padding: 3em 2em;
 			}
 
 			&__content {
+				
 				width: 100%;
 			}
 
 			&__content-title {
-				text-align: center;
+				text-align: end;
 				& h2 {
-					font-size: 5rem;
+					font-size: 7rem;
 				}
 			}
 
 			&__span-box {
 				& span {
-					font-size: 2rem;
+					font-size: 2.6rem;
 				}
 
 				& span:last-child {
-					font-size: 1.4rem;
+					font-size: 1.8rem;
 				}
 			}
 
 			&__content-text {
 				margin: 3em 0 2em;
 				& p {
-					font-size: 1.2rem;
+					font-size: 1.4rem;
 				}
+			}
+
+			&__img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin: 0 auto;
+			}
+
+			&__gradient-bar {
+				top: -2em;
+				height: 4em;
 			}
 		}
 
@@ -425,11 +395,11 @@
 			&__title {
 				margin: 3em 1em 0 0;
 				& h2 {
-					font-size: 3rem;
+					font-size: 3.8rem;
 				}
 
 				& span {
-					font-size: 2rem;
+					font-size: 2.4rem;
 				}
 			}
 
@@ -443,14 +413,13 @@
 
 			&__content-item {
 				padding: 3em 1em 2em;
-				// min-height: 250px;
 
 				& i {
-					font-size: 2rem;
+					font-size: 2.2rem;
 				}
 
 				& p {
-					font-size: 1.4rem;
+					font-size: 1.6rem;
 				}
 			}
 		}
@@ -458,11 +427,11 @@
 		.contact {
 			&__title {
 				& h2 {
-					font-size: 3rem;
+					font-size: 3.6rem;
 				}
 
 				& span {
-					font-size: 1.8rem;
+					font-size: 2rem;
 				}
 			}
 
@@ -471,7 +440,6 @@
 			}
 
 			&__form-row {
-				flex-direction: column;
 				gap: 1em;
 				margin: 0 1em;
 			}
@@ -506,7 +474,7 @@
 				width: auto;
 
 				& label {
-					font-size: 1.2rem;
+					font-size: 1.4rem;
 				}
 			}
 
@@ -520,6 +488,144 @@
 			&__form-btns {
 				margin: 2em auto;
 			}
+			
+
+			&__gradient {
+				height: 4em;
+			}
+		}
+	}
+
+	@media (max-width: 450px) {
+		.offer {
+			margin: 0 1em;
+		}
+
+		.news {
+
+			&__title {
+				& h2 {
+					font-size: 4rem;
+				}
+			}
+
+			&__content-text {
+
+				& span {
+					font-size: 1.4rem;
+				}
+
+				& li {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		.showreel {
+			&__title-box {
+				& h2 {
+					font-size: 4rem;
+				}
+				& i {
+					font-size: 2rem;
+				}
+
+				& span {
+					font-size: 1.4rem;
+				}
+			}
+		}
+		.questions {
+			&__box {
+				margin: 2em 1em 3em;
+			}
+
+			&__accordeon-box-content {
+				& i {
+					margin-right: 0.3em;
+					font-size: 1.6rem;
+				}
+			}
+
+			&__accordeon-btn {
+				margin-left: 0.3em;
+				font-size: 1.9rem;
+			}
+		}
+
+		.about-us {
+		
+
+			&__content-title {
+				& h2 {
+					font-size: 5rem;
+				}
+			}
+
+			&__span-box {
+				& span {
+					font-size: 2rem;
+				}
+
+				& span:last-child {
+					font-size: 1.4rem;
+				}
+			}
+
+			&__content-text {
+				& p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		.why-us {
+			&__title {
+				& h2 {
+					font-size: 3rem;
+				}
+
+				& span {
+					font-size: 2rem;
+				}
+			}
+
+			&__content-item {
+
+				& i {
+					font-size: 2rem;
+				}
+
+				& p {
+					font-size: 1.4rem;
+				}
+			}
+		}
+
+		.contact {
+			&__title {
+				& h2 {
+					font-size: 3rem;
+				}
+
+				& span {
+					font-size: 1.8rem;
+				}
+			}
+
+
+			&__form-row {
+				flex-direction: column;
+				
+			}
+
+			&__form-slider {
+
+				& label {
+					font-size: 1.2rem;
+				}
+			}
+
 			&__form-btn {
 				display: block;
 				margin: 2em auto;
