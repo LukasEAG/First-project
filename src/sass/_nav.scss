@@ -305,6 +305,10 @@
 			top: 65px;
 			width: 52%;
 		}
+
+		&__lang-btn {
+			font-size: 1.2rem;
+		}
 	}
 }
 @media (max-width: 458px) {
@@ -332,8 +336,6 @@
 			width: 75%;
 		}
 
-		&__lang-btn {
-			font-size: 1.2rem;
-		}
+		
 	}
 }
