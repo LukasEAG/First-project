@@ -12,6 +12,8 @@ menuOpenBtns.forEach(btn =>
 		btn.classList.add('hide-btn')
 		menuCloseBtn.classList.add('show-btn')
 		body.classList.add('stop-scrolling')
+		langList.classList.toggle('active-lang')
+
 	})
 )
 
@@ -39,6 +41,11 @@ const langList = document.querySelector('.nav__lang-list')
 multiLangBtns.forEach(btn => {
 	btn.addEventListener('click', () => {
 		langList.classList.toggle('active-lang')
+		mobileMenu.classList.remove('active')
+		menuOpenBtns.forEach(btn => btn.classList.remove('hide-btn'))
+		menuCloseBtn.classList.remove('show-btn')
+		body.classList.remove('stop-scrolling')
+
 	})
 })
 
