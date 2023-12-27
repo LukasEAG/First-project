@@ -719,6 +719,7 @@ section {
 
 	&__accordeon-box-content {
 		margin-top: 2.6em;
+		cursor: pointer;
 
 		& span {
 			font-size: 1.8rem;
@@ -727,7 +728,7 @@ section {
 		& i {
 			margin-right: 0.5em;
 			padding: 0.6em;
-			font-size: 3rem;
+			font-size: 2.6rem;
 			font-style: normal;
 			letter-spacing: -2px;
 			color: $eag-red;
@@ -738,9 +739,9 @@ section {
 	}
 
 	&__accordeon-btn {
-		margin-left: 3em;
+		margin-left: 2em;
 		padding: 0.2em;
-		font-size: 3rem;
+		font-size: 2.6rem;
 		color: $eag-white;
 		background-color: transparent;
 		border: none;

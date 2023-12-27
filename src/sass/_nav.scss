@@ -245,34 +245,6 @@
 }
 @media (max-width: 769px) {
 	.nav {
-	
-		// &__logo {
-		// 	width: 80%;
-		// }
-
-		// &__mobile-menu-btns {
-		// 	width: 10%;
-		// }
-
-		&__lang-list {
-			width: 35%;
-		}
-	}
-}
-@media (max-width: 700px) {
-	.nav {
-		&__more-btns {
-			margin-right: 0.5em;
-		}
-
-		&__lang-list {
-			width: 42%;
-		}
-	}
-}
-
-@media (max-width: 568px) {
-	.nav {
 		max-height: 65px;
 
 		&__menu {
@@ -300,6 +272,26 @@
 		&__more-lang-btn {
 			font-size: 1.8rem;
 		}
+		&__lang-list {
+			width: 35%;
+		}
+	}
+}
+@media (max-width: 700px) {
+	.nav {
+		&__more-btns {
+			margin-right: 0.5em;
+		}
+
+		&__lang-list {
+			width: 42%;
+		}
+	}
+}
+
+@media (max-width: 568px) {
+	.nav {
+		
 
 		&__lang-list {
 			top: 65px;
