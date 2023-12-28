@@ -15,7 +15,6 @@
 	}
 
 	@media (max-width: 1200px) {
-	
 		.questions {
 			&__box {
 				margin: 3em 2em 6em;
@@ -67,6 +66,16 @@
 		}
 
 		.news {
+			&__box {
+				padding: 3em 1em;
+			}
+
+			&__title {
+				& h2 {
+					font-size: 7rem;
+				}
+			}
+
 			&__gradient {
 				height: 6em;
 			}
@@ -155,7 +164,7 @@
 			&__box {
 				margin: 3em 2em 4em;
 			}
-			
+
 			&__title {
 				margin: 3em;
 
@@ -175,17 +184,154 @@
 					font-size: 1.4rem;
 				}
 			}
-
 		}
 
 		.about-us {
+			&__box {
+				padding: 7em 3em 5em;
+				align-items: flex-end;
+			}
+
+			&__content-title {
+				& h2 {
+					font-size: 7rem;
+				}
+			}
+
+			&__span-box {
+				& span {
+					font-size: 3rem;
+				}
+				& span:last-child {
+					font-size: 2rem;
+				}
+			}
+
+			&__content-text {
+				margin: 3em 2em 1em 0;
+				& p {
+					font-size: 1.4rem;
+				}
+			}
+
+			&__img {
+				& img {
+					max-height: 600px;
+				}
+			}
+
 			&__gradient-bar {
 				top: -3em;
 				height: 6em;
 			}
 		}
 
+		.why-us {
+			&__box {
+				margin: 0 1em;
+			}
+
+			&__title {
+				margin: 3em 1em 0 0;
+				& h2 {
+					font-size: 4rem;
+				}
+
+				& span {
+					font-size: 2.6rem;
+				}
+			}
+
+			&__content {
+				flex-direction: column;
+			}
+
+			&__content-items {
+				display: flex;
+				flex: 100%;
+
+				& p {
+					font-size: 1.6rem;
+				}
+			}
+
+			&__content-item {
+				padding: 3em 1em 2em;
+				width: 50%;
+
+				& i {
+					font-size: 2.4rem;
+				}
+			}
+		}
+
 		.contact {
+			&__title {
+				& h2 {
+					font-size: 4.6rem;
+				}
+
+				& span {
+					font-size: 2.4rem;
+				}
+			}
+
+			&__form {
+				margin-top: 3em;
+			}
+
+			&__form-row {
+				gap: 1em;
+				margin: 0 2em;
+			}
+
+			&__form-row-item {
+				padding: 1em;
+				max-width: none;
+			}
+
+			&__form-checkbox {
+				margin: 2em 2em 0;
+				padding: 1em;
+				max-height: 280px;
+				max-width: none;
+				width: auto;
+			}
+
+			&__form-checkbox-row {
+				margin-bottom: 1em;
+			}
+
+			&__form-checkbox-item {
+				margin-bottom: 3em;
+				width: 100%;
+			}
+
+			&__form-slider {
+				margin: 4em 2em 0;
+				padding: 1em;
+				max-width: none;
+				width: auto;
+
+				& label {
+					font-size: 1.4rem;
+				}
+			}
+
+			&__form-msg {
+				margin: 4em 2em 0;
+				padding: 1em;
+				max-width: none;
+				width: auto;
+			}
+
+			&__form-btns {
+				margin: 2em auto;
+			}
+
+			&__gradient {
+				height: 6em;
+			}
 			&__gradient {
 				height: 6em;
 			}
@@ -230,10 +376,6 @@
 		}
 
 		.news {
-			&__box {
-				padding: 3em 1em;
-			}
-
 			&__title {
 				& h2 {
 					font-size: 6rem;
@@ -251,9 +393,6 @@
 					font-size: 1.8rem;
 				}
 			}
-			&__gradient {
-				height: 6em;
-			}
 		}
 
 		.showreel {
@@ -266,7 +405,6 @@
 		}
 
 		.questions {
-
 			&__accordeon-box {
 				gap: 3em;
 				flex: 100%;
@@ -320,6 +458,10 @@
 				top: 0;
 				left: 0;
 				margin: 0 auto;
+
+				& img {
+					max-height: 839px;
+				}
 			}
 
 			&__gradient-bar {
@@ -334,7 +476,6 @@
 			}
 
 			&__title {
-				margin: 3em 1em 0 0;
 				& h2 {
 					font-size: 4rem;
 				}
@@ -346,9 +487,11 @@
 
 			&__content {
 				flex-wrap: wrap;
+				flex-direction: row;
 			}
 
 			&__content-items {
+				flex-direction: column;
 				flex: 100%;
 
 				& p {
@@ -358,6 +501,7 @@
 
 			&__content-item {
 				padding: 3em 1em 2em;
+				width: 100%;
 
 				& i {
 					font-size: 2.4rem;
@@ -375,27 +519,14 @@
 					font-size: 2.2rem;
 				}
 			}
-
-			&__form {
-				margin-top: 3em;
-			}
-
 			&__form-row {
-				gap: 1em;
 				margin: 0 1em;
 			}
 
-			&__form-row-item {
-				padding: 1em;
-				max-width: none;
-			}
 
 			&__form-checkbox {
 				margin: 2em 1em 0;
-				padding: 1em;
-				max-height: 280px;
-				max-width: none;
-				width: auto;
+			
 			}
 
 			&__form-checkbox-row {
@@ -403,35 +534,13 @@
 				margin-bottom: 0;
 			}
 
-			&__form-checkbox-item {
-				margin-bottom: 3em;
-				width: 100%;
-			}
-
+		
 			&__form-slider {
 				margin: 4em 1em 0;
-				padding: 1em;
-				max-width: none;
-				width: auto;
-
-				& label {
-					font-size: 1.4rem;
-				}
 			}
 
 			&__form-msg {
 				margin: 4em 1em 0;
-				padding: 1em;
-				max-width: none;
-				width: auto;
-			}
-
-			&__form-btns {
-				margin: 2em auto;
-			}
-
-			&__gradient {
-				height: 6em;
 			}
 		}
 	}
@@ -495,8 +604,6 @@
 			}
 		}
 		.news {
-		
-
 			&__title {
 				& h2 {
 					font-size: 5rem;
@@ -517,7 +624,6 @@
 			&__gradient {
 				height: 4em;
 			}
-			
 		}
 
 		.showreel {
@@ -570,9 +676,7 @@
 			}
 		}
 		.about-us {
-		
 			&__content-title {
-		
 				& h2 {
 					font-size: 5rem;
 				}
@@ -589,7 +693,6 @@
 			}
 
 			&__content-text {
-
 				& p {
 					font-size: 1.4rem;
 				}
@@ -597,7 +700,6 @@
 		}
 
 		.why-us {
-
 			&__title {
 				& h2 {
 					font-size: 3.8rem;
@@ -609,14 +711,12 @@
 			}
 
 			&__content-items {
-
 				& p {
 					font-size: 1.4rem;
 				}
 			}
 
 			&__content-item {
-
 				& i {
 					font-size: 2.2rem;
 				}
@@ -624,7 +724,6 @@
 		}
 
 		.contact {
-
 			&__form {
 				& label {
 					font-size: 1.4rem;
