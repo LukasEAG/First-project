@@ -44,6 +44,33 @@
 				margin-left: 0.5em;
 				font-size: 2rem;
 			}
+		}.about-us {
+		
+
+			&__content-title {
+				& h2 {
+					font-size: 7.6rem;
+				}
+			}
+
+			&__span-box {
+				& span {
+					font-size: 3rem;
+				}
+				& span:last-child {
+					font-size: 2rem;
+				}
+			}
+
+			&__content-text {
+				& p {
+					font-size: 1.4rem;
+				}
+			}
+
+			&__img {
+				width: 50%;
+			}
 		}
 	}
 
