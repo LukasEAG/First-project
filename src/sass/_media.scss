@@ -44,9 +44,8 @@
 				margin-left: 0.5em;
 				font-size: 2rem;
 			}
-		}.about-us {
-		
-
+		}
+		.about-us {
 			&__content-title {
 				& h2 {
 					font-size: 7.6rem;
@@ -75,6 +74,9 @@
 	}
 
 	@media (max-width: 992px) {
+		.header {
+			height: calc(100vw * (720/1220));
+		}
 		.offer {
 			&__title-text {
 				& h2 {
@@ -366,6 +368,12 @@
 	}
 	@media (max-width: 769px) {
 		.header {
+			top: 65px;
+
+			&__head {
+				height: calc(100% - 65px);
+			}
+
 			&__title {
 				& h1 {
 					font-size: 2.6rem;
@@ -550,10 +558,8 @@
 				margin: 0 1em;
 			}
 
-
 			&__form-checkbox {
 				margin: 2em 1em 0;
-			
 			}
 
 			&__form-checkbox-row {
@@ -561,7 +567,6 @@
 				margin-bottom: 0;
 			}
 
-		
 			&__form-slider {
 				margin: 4em 1em 0;
 			}
@@ -573,6 +578,10 @@
 	}
 
 	@media (max-width: 669px) {
+		.header {
+			height: 70vw;
+
+		}
 		.questions {
 			&__box {
 				margin: 2em 4em 4em;
@@ -604,6 +613,10 @@
 	}
 
 	@media (max-width: 568px) {
+		.header {
+			height: 100vw;
+
+		}
 		.offer {
 			&__title-text {
 				& h2 {
