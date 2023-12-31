@@ -1,7 +1,9 @@
 @use '../sass/colors' as *;
 
 @mixin queries {
+
 	@media (max-width: 1300px) {
+	
 		.questions {
 			&__accordeon-box-content {
 				& i {

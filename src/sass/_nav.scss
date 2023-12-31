@@ -194,7 +194,7 @@
 @media (max-width: 992px) {
 	.nav {
 		&__logo {
-			justify-content: start;
+			justify-content: flex-start;
 			width: 80%;
 		}
 		&__menu {

@@ -241,8 +241,8 @@ footer {
 
 @media (max-width: 568px) {
 	.footer {
-
-		&  button {
+		& button {
+			margin: 0 0.5em;
 			font-size: 2rem;
 		}
 		& i {
@@ -262,7 +262,6 @@ footer {
 			display: flex;
 			justify-content: center;
 			padding: 3em 0;
-			gap: 2em;
 		}
 
 		&__mobile-btns {
@@ -286,7 +285,10 @@ footer {
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
-			gap: 2em;
+
+			& a {
+				margin: 0 0.5em;
+			}
 
 			& i {
 				padding: 0.4em;
@@ -324,7 +326,6 @@ footer {
 			display: flex;
 			flex-direction: column;
 			font-size: 1.4rem;
-			gap: 2em;
 
 			& i {
 				padding-right: 0.3em;
@@ -335,6 +336,7 @@ footer {
 
 			& a {
 				color: $eag-white;
+				margin: 1em 0;
 			}
 		}
 
@@ -348,7 +350,6 @@ footer {
 				color: $eag-red;
 			}
 		}
-
 	}
 }
 
@@ -360,15 +361,20 @@ footer {
 			gap: 2em;
 		}
 
+	}
+}
 
-		&__mobile-menu {
-			
-			gap: 1em;
+@media (max-width: 300px) {
+	.footer {
+		& button {
+			margin: 0 0.1em;
 		}
 
 		&__mobile-socials {
 
-			gap: 1em;
+			& a{ 
+				margin: 0 0.1em;
+			}
 		}
 	}
 }

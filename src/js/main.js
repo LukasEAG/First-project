@@ -107,14 +107,6 @@ showRellMobileBtns.forEach(button => {
 
 		imgList.children[newActiveImg].dataset.active = true
 		delete activeImg.dataset.active
-
-		// console.log(nextBtn)
-
-		// newActiveImg >= imgList.children.length - 1
-		// 	? nextBtn.classList.add('noactvie')
-		// 	: nextBtn.classList.remove('noactvie')
-
-		// newActiveImg > 0 ? prevBtn.classList.add('actvie') : prevBtn.classList.remove('actvie')
 	})
 })
 
@@ -179,30 +171,6 @@ const toSlider = document.querySelector('#toSlider')
 const fromInput = document.querySelector('#fromInput')
 const toInput = document.querySelector('#toInput')
 
-// function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
-//     const [from, to] = getParsed(fromInput, toInput);
-//     fillSlider(fromInput, toInput, '#C6C6C6', '#b60732', controlSlider);
-//     if (from > to) {
-//         fromSlider.value = to;
-//         fromInput.innerText = to + ` zł`;
-//     } else {
-//         fromSlider.innerText = from + ` zł`;
-//     }
-
-// }
-
-// function controlToInput(toSlider, fromInput, toInput, controlSlider) {
-//     const [from, to] = getParsed(fromInput, toInput);
-//     fillSlider(fromInput, toInput, '#C6C6C6', '#b60732', controlSlider);
-//     setToggleAccessible(toInput);
-//     if (from <= to) {
-//         toSlider.value = to;
-//         toInput.innerText = to + ` zł`;
-//     } else {
-//         toInput.innerText = from + ` zł`;
-//     }
-// }
-
 function controlFromSlider(fromSlider, toSlider, fromInput) {
 	const [from, to] = getParsed(fromSlider, toSlider)
 	fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider)
@@ -261,8 +229,7 @@ setToggleAccessible(toSlider)
 
 fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput)
 toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput)
-// fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
-// toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
 
 // Footer current year
 
