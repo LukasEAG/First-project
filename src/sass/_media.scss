@@ -15,6 +15,22 @@
 	}
 
 	@media (max-width: 1200px) {
+		.header {
+			&__title {
+				& h1 {
+					font-size: 4rem;
+				}
+
+				& span {
+					font-size: 1.4rem;
+				}
+			}
+
+			&__btn {
+				font-size: 1.4rem;
+			}
+		}
+
 		.questions {
 			&__box {
 				margin: 3em 2em 6em;
@@ -75,7 +91,13 @@
 
 	@media (max-width: 992px) {
 		.header {
-			height: calc(100vw * (720/1220));
+			height: calc(100vw * (720 / 1220));
+
+			&__title {
+				& h1 {
+					font-size: 3.6rem;
+				}
+			}
 		}
 		.offer {
 			&__title-text {
@@ -378,10 +400,6 @@
 				& h1 {
 					font-size: 2.6rem;
 				}
-
-				& span {
-					font-size: 1.4rem;
-				}
 			}
 			&__items {
 				display: none;
@@ -493,6 +511,7 @@
 				top: 0;
 				left: 0;
 				margin: 0 auto;
+				width: 100%;
 
 				& img {
 					max-height: 839px;
@@ -580,7 +599,6 @@
 	@media (max-width: 669px) {
 		.header {
 			height: 70vw;
-
 		}
 		.questions {
 			&__box {
@@ -616,6 +634,19 @@
 		.header {
 			height: 100vw;
 
+			&__title {
+				& h1 {
+					font-size: 2rem;
+				}
+
+				& span {
+					font-size: 1.2rem;
+				}
+			}
+
+			&__btn {
+				font-size: 1.2rem;
+			}
 		}
 		.offer {
 			&__title-text {
