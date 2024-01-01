@@ -241,3 +241,98 @@ const handleCurrentYear = () => {
 
 handleCurrentYear()
 
+
+//Multi language
+
+
+const langBtns = document.querySelectorAll('.nav__lang-btn')			
+
+
+let MultiLang = function(url, lang, onload)
+{
+	
+	this.phrases = {};
+
+	this.selectedLanguage = (lang || navigator.language || navigator.userLanguage).substring(0, 2);
+	
+	this.onLoad = onload;
+
+	if (typeof url !== 'undefined') {
+		let obj = this;
+		let req = new XMLHttpRequest();
+
+		req.open("GET", url, true);
+		req.onreadystatechange = function (evt) {
+			if (evt.target.readyState == 4 && evt.target.status == 200) 
+			{
+				this.phrases = JSON.parse( evt.target.responseText );
+
+				this.setLanguage(this.selectedLanguage);
+				
+				if (this.onLoad) {
+					this.onLoad();
+				}
+
+			};
+		}.bind(obj);
+		req.addEventListener("error", function(e) {
+			console.log('MultiLang.js: Error reading json file.');
+		}, false);
+		
+		req.send(null);
+	};
+
+	this.setLanguage = function(langcode) {
+		if (!this.phrases.hasOwnProperty(langcode)) {
+			for (let key in this.phrases) {
+				if (this.phrases.hasOwnProperty(key)) {
+					langcode = key; 
+					break;
+				};
+			};
+		};
+
+		this.selectedLanguage = langcode;
+	};
+
+	this.get = function(key) {
+		let str;
+		if (this.phrases[this.selectedLanguage]) str = this.phrases[this.selectedLanguage][key];
+
+    str = (str || key)
+		return str;
+}
+}
+let multilang;
+
+
+function onLoad() {
+
+  multilang = new MultiLang('dataLang.json', 'en');
+}
+
+function langSelectChange(sel) {
+  multilang.setLanguage(sel.value);
+  refreshLabels();
+}
+
+function refreshLabels() {
+  let allnodes = document.querySelectorAll("[data-lang]");
+
+  
+  for (let i=0, max=allnodes.length; i < max; i++) {
+    let idname = allnodes[i].dataset.lang;
+    if (idname != '') {
+      allnodes[i].textContent = multilang.get(idname);
+    };
+  };
+}
+
+  langBtns.forEach(btn => 
+    btn.addEventListener('click', e => {
+      langSelectChange(e.target)
+
+  })
+  )
+
+  body.addEventListener('load', onLoad())
