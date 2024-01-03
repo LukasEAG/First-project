@@ -33,7 +33,7 @@ menuItems.forEach(item => {
 	})
 })
 
-// Multilanguage
+// Multilanguage menu
 
 const multiLangBtns = document.querySelectorAll('.nav__more-lang-btn')
 const langList = document.querySelector('.nav__lang-list')
@@ -91,6 +91,8 @@ buttons.forEach(button => {
 const showRellMobileBtns = document.querySelectorAll('[data-show-btn]')
 const nextBtn = document.querySelector('[data-show-btn="next"]')
 const prevBtn = document.querySelector('[data-show-btn="prev"]')
+let contentWidth = 1600
+
 
 showRellMobileBtns.forEach(button => {
 	button.addEventListener('click', () => {
@@ -112,15 +114,13 @@ showRellMobileBtns.forEach(button => {
 
 window.addEventListener('resize', () => {
 	let insetWindowWidth = window.innerWidth
-	let contentWidth = 1600
 	let boxWidth = insetWindowWidth / contentWidth
 	galleryBox.style.transform = boxWidth >= 1 ? 'scale(1)' : `scale(${boxWidth})`
 })
 window.addEventListener('load', () => {
 	let insetWindowWidth = window.innerWidth
-	let contentWidth = 1600
 	let boxWidth = insetWindowWidth / contentWidth
-	galleryBox.style.transform = `scale(${boxWidth})`
+	galleryBox.style.transform =  boxWidth >= 1 ? 'scale(1)' : `scale(${boxWidth})`
 })
 
 // Questions accordeon
@@ -231,17 +231,6 @@ fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput)
 toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput)
 
 
-// Footer current year
-
-const footerYear = document.querySelector('.footer__foot-year')
-const handleCurrentYear = () => {
-	const year = new Date().getFullYear()
-	footerYear.innerText = year
-}
-
-handleCurrentYear()
-
-
 //Multi language
 
 
@@ -336,3 +325,14 @@ function refreshLabels() {
   )
 
   body.addEventListener('load', onLoad())
+
+
+  // Footer current year
+
+const footerYear = document.querySelector('.footer__foot-year')
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+
+handleCurrentYear()
