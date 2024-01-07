@@ -240,8 +240,9 @@ section {
 		& h2 {
 			margin-bottom: -0.3em;
 			font-size: 10rem;
-			text-transform: uppercase;
 			letter-spacing: -5px;
+			filter: drop-shadow( 1px 1px 15px rgba( $eag-white, .5));
+
 		}
 
 		& span {
@@ -251,7 +252,7 @@ section {
 			letter-spacing: -3px;
 			color: $eag-red;
 		}
-
+		
 		& p {
 			font-size: 1.6rem;
 			color: $eag-white;
@@ -290,127 +291,66 @@ section {
 		}
 	}
 
+	&__span-arrow {
+		margin-top: -.4em;
+	}
+
 	&__content-section {
 		position: relative;
 		display: block;
 		width: 100%;
-		min-height: 700px;
 		height: 100%;
 	}
 
-	// &__content-background {
-	//     position: relative;
-	// 	display: flex;
-	// }
-	// &__content-background-img {
-	// 	position: relative;
-	// 	width: 100%;
-	// 	object-fit: cover;
+	&__content-text {
 
-	// 	& img {
-	// 		width: 100%;
-	// 		height: auto;
-	// 		max-height: 690px;
-	// 		object-fit: cover;
-	// 	}
-	// }
-
-	// &__content-cards {
-	// 	position: absolute;
-	// 	display: flex;
-	// 	width: 100%;
-	// 	height: calc(100% - 80px);
-	// }
-
-	// &__content-cards::after {
-	// 	position: absolute;
-	// 	inset: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	background-color: rgba(87, 87, 87, 0.3);
-	// 	content: '';
-	// }
-
-	// &__content-card-box {
-	//     position: relative;
-	//     display: flex;
-	//     justify-content: space-between;
-	//     width: 100%;
-	//     height: 100%;
-
-	// }
-
-	&__content-card {
-		display: inline-block;
-		height: 100%;
+		padding: 5em 7em;
+		color: $eag-white;
+		font-size: 2rem;
+		line-height: 2.5em;
 	}
 
-	&__content-card {
-		position: relative;
-		top: 0;
-		left: 0;
+	&__content-icons {
 		display: flex;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		justify-content: space-evenly;
+		align-items: center;
+		color: $eag-white;
+		
 
-		& img {
-			width: 100%;
-			height: auto;
-			max-height: 690px;
-			object-fit: cover;
+		& span {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: 2.2rem;
+			text-transform: uppercase;
+			filter: drop-shadow( 1px 1px 15px $eag-white);
+		
 		}
-	}
-
-	&__contenr-card-text {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		padding: 0 3em;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-		width: 370px;
-		height: 470px;
-		background-color: rgba(0, 0, 0, 0.6);
-		z-index: 2;
 
 		& i {
-			margin: 1.4em 0 1em;
-			padding: 0.5em;
-			font-size: 3.6rem;
-			background-color: $eag-grey;
-			color: $eag-red;
-			border-radius: 8px;
-		}
-
-		& h3 {
-			margin-bottom: 1em;
-			font-size: 2rem;
-			font-weight: 400;
-			color: $eag-white;
-		}
-
-		& p {
-			font-size: 1.4rem;
-			color: $eag-white;
-		}
-
-		& button {
-			position: absolute;
-			bottom: 0;
-			margin: 0 auto;
-			margin-bottom: 2em;
-			padding: 1em 8em;
-			background-color: $eag-grey;
-			color: $eag-white;
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
+			margin-bottom: .3em;
+			font-size: 8rem;
 		}
 	}
+
+	&__content-details {
+		padding: 5em 7em;
+		font-size: 2rem;
+		color: $eag-white;
+	
+		& h3 {
+			margin: 1em 0;
+			font-weight: 400;
+		}
+	}
+
+	&__content-item {
+
+		margin: 1em 0 1em 1.5em;
+		line-height: 2em;
+	}
+
 
 	&__gradient-bar {
 		position: absolute;
@@ -428,10 +368,11 @@ section {
 .news {
 	position: relative;
 	width: 100%;
-	background-color: rgba(#fff, $alpha: 0.9);
+	background-color: rgba($eag-white, $alpha: 0.4);
 	background-image: url(../img/eagnews.png);
 	background-size: cover;
 	background-position: center;
+	filter: grayscale(100%);
 	overflow-x: hidden;
 
 	&__box {
@@ -542,7 +483,7 @@ section {
 		& h2 {
 			font-size: 7rem;
 			letter-spacing: -3px;
-			color: #debda1;
+			color: rgba($eag-white, $alpha: 0.8);
 			vertical-align: middle;
 		}
 
@@ -561,7 +502,7 @@ section {
 			right: 0;
 			font-size: 1.6rem;
 			letter-spacing: -0.5px;
-			color: #908b89;
+			color: rgba($eag-white, $alpha: 0.6);
 		}
 	}
 
@@ -702,7 +643,7 @@ section {
 		align-self: stretch;
 		width: 100%;
 		margin: 3em 8em 6em;
-		background-color: rgba(#000, $alpha: 0.6);
+		background-color: rgba(#000, $alpha: 0.75);
 		z-index: 5;
 	}
 
@@ -726,7 +667,7 @@ section {
 	&__accordeon-box {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		gap: 4.5em;
 		width: 50%;
 
@@ -735,12 +676,20 @@ section {
 		}
 	}
 
+	&__accordeon-box:first-child {
+		margin-left: 4em;
+	}
+
 	&__accordeon-box-content {
+		display: flex;
+		width: 100%;
 		margin-top: 2.6em;
 		cursor: pointer;
 
 		& span {
+			margin: auto 0;
 			font-size: 1.8rem;
+			width: 70%;
 		}
 
 		& i {
@@ -757,7 +706,10 @@ section {
 	}
 
 	&__accordeon-btn {
-		margin-left: 2em;
+		width: 10%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		padding: 0.2em;
 		font-size: 2.6rem;
 		color: $eag-white;
@@ -771,6 +723,7 @@ section {
 		transform: rotate(45deg);
 		color: $eag-red;
 	}
+		
 
 	&__accordeon-info {
 		display: none;
@@ -807,10 +760,13 @@ section {
 	}
 
 	&__content-title {
+
 		& h2 {
 			font-size: 10rem;
 			font-weight: 600;
 			letter-spacing: -6px;
+			filter: drop-shadow( 1px 1px 15px rgba( $eag-white, .5));
+
 		}
 
 		& i {
@@ -829,13 +785,12 @@ section {
 			font-size: 5rem;
 			font-weight: 600;
 			letter-spacing: -2px;
-			color: #d37e46;
+			color: $eag-white;
 		}
 
 		& span:last-child {
-			text-align: right;
-			right: 0;
 			font-size: 2.5rem;
+			color: $eag-red;
 		}
 	}
 
@@ -861,6 +816,7 @@ section {
 			max-height: 839px;
 			opacity: 0.6;
 			z-index: 0;
+			filter: grayscale(100%);
 		}
 	}
 
@@ -918,7 +874,7 @@ section {
 		& h2 {
 			font-size: 5rem;
 			letter-spacing: -3px;
-			color: #316edd;
+			color: $eag-white;
 		}
 
 		& span {
@@ -953,8 +909,8 @@ section {
 			padding: 0.6em;
 			margin-right: 0.5em;
 			font-size: 2.8rem;
-			color: $eag-red;
-			background-color: $eag-blue;
+			color: $eag-white;
+			background-color: $eag-red;
 			border-radius: 8px;
 		}
 
@@ -982,7 +938,7 @@ section {
 		width: 100%;
 		text-align: center;
 		background: rgb(0, 0, 0);
-		background: linear-gradient(270deg, rgba(0, 0, 0, 0.6) 0%, rgba(21, 46, 91, 0.9) 60%);
+		background: linear-gradient(270deg, rgba(0, 0, 0, 0.8) 0%, rgba(19, 20, 21, 0.9) 60%);
 
 		& h2 {
 			font-size: 5rem;
@@ -1285,18 +1241,19 @@ section {
 		width: 100%;
 		height: 8em;
 		background: rgb(21, 46, 91);
-		background: linear-gradient(90deg, rgba(21, 46, 91, 1) 20%, rgba(251, 120, 0, 1) 93%);
+		background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(21,46,91,1) 34%, rgba(182,7,50,1) 34%, rgba(182,7,50,1) 93%);
 	}
 
-	&__gradient::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(#fff, $alpha: 0.3);
-		content: '';
-	}
+	// &__gradient::before {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	background-color: rgba(#fff, $alpha: 0.3);
+	// 	content: '';
+	// }
 }
 
 @include media.queries;
