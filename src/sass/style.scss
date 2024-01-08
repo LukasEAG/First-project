@@ -18,7 +18,7 @@ html {
 
 body {
 	font-family: 'Nunito Sans', 'Hind', sans-serif;
-	background-color: $body-bgc;
+	background-color: $eag-white;
 }
 
 .wrapper {
@@ -815,12 +815,12 @@ section {
 
 	&__gradient-bar {
 		position: absolute;
-		top: -4em;
+		top: -2.5em;
 		left: 0;
 		width: 100%;
-		height: 8em;
-		background: rgb(21, 46, 91);
-		background: linear-gradient(270deg, rgba(0, 0, 0, 0.1) 38%, rgba(251, 120, 0, 0.1) 100%);
+		height: 5em;
+		background: rgb(0,0,0);
+background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(21,46,91,1) 70%, rgba(182,7,50,1) 70%, rgba(182,7,50,1) 93%);
 	}
 }
 

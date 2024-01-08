@@ -86,6 +86,8 @@
 			&__img {
 				width: 50%;
 			}
+
+			
 		}
 	}
 
@@ -292,11 +294,12 @@
 					max-height: 600px;
 				}
 			}
-
 			&__gradient-bar {
-				top: -3em;
-				height: 6em;
+				top: -2em;
+				height: 4em;
 			}
+
+			
 		}
 
 		.why-us {
@@ -548,10 +551,7 @@
 				}
 			}
 
-			&__gradient-bar {
-				top: -2em;
-				height: 4em;
-			}
+			
 		}
 
 		.why-us {
@@ -843,6 +843,11 @@
 				& p {
 					font-size: 1.4rem;
 				}
+			}
+
+			&__gradient-bar {
+				top: -1.5em;
+				height: 3em;
 			}
 		}
 
