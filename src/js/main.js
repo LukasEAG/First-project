@@ -171,28 +171,36 @@ const toSlider = document.querySelector('#toSlider')
 const fromInput = document.querySelector('#fromInput')
 const toInput = document.querySelector('#toInput')
 
-function controlFromSlider(fromSlider, toSlider, fromInput) {
+
+
+
+
+function controlFromSlider(fromSlider, toSlider, fromInput ) {
+
 	const [from, to] = getParsed(fromSlider, toSlider)
 	fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider)
 	if (from > to) {
 		fromSlider.value = to
-		fromInput.innerText = `${to} zł`
+		fromInput.innerText = `${to} `
 	} else {
-		fromInput.innerText = `${from} zł`
+		fromInput.innerText = `${from}  `
 	}
+
 }
 
 function controlToSlider(fromSlider, toSlider, toInput) {
+
 	const [from, to] = getParsed(fromSlider, toSlider)
 	fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider)
 	setToggleAccessible(toSlider)
 	if (from <= to) {
-		toSlider.value = to
-		toInput.innerText = `${to} zł`
+		toSlider.budget = to
+		toInput.innerText = `${to} `
 	} else {
-		toInput.innerText = `${from} zł`
+		toInput.innerText = `${from} `
 		toSlider.value = from
 	}
+
 }
 
 function getParsed(currentFrom, currentTo) {
@@ -229,6 +237,7 @@ setToggleAccessible(toSlider)
 
 fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput)
 toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput)
+
 
 
 //Multi language
@@ -325,6 +334,9 @@ function refreshLabels() {
   )
 
   body.addEventListener('load', onLoad())
+  langBtns.forEach(btn => btn.addEventListener('click', () => {
+	langList.classList.remove('active-lang')
+  }))
 
 
   // Footer current year
