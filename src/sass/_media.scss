@@ -1,9 +1,7 @@
 @use '../sass/colors' as *;
 
 @mixin queries {
-
 	@media (max-width: 1300px) {
-	
 		.questions {
 			&__accordeon-box-content {
 				& i {
@@ -104,7 +102,11 @@
 		.offer {
 			&__title-text {
 				& h2 {
-					font-size: 7rem;
+					font-size: 6.6rem;
+				}
+
+				& span {
+					font-size: 3.2rem;
 				}
 			}
 			&__title-span {
@@ -112,7 +114,20 @@
 					font-size: 2.8rem;
 				}
 			}
+			&__content-text {
+				padding: 5rem 4rem;
+			}
 
+			&__icons-box {
+				& i {
+					margin-bottom: 0.3em;
+					font-size: 5rem;
+				}
+			}
+
+			&__content-details {
+				padding: 5rem 4rem;
+			}
 			&__gradient-bar {
 				height: 6em;
 			}
@@ -125,7 +140,7 @@
 
 			&__title {
 				& h2 {
-					font-size: 7rem;
+					font-size: 6.6rem;
 				}
 			}
 
@@ -135,6 +150,11 @@
 		}
 
 		.showreel {
+			&__title {
+				& h2 {
+					font-size: 6.6rem;
+				}
+			}
 			&__gallery-img-box {
 				display: none;
 			}
@@ -247,13 +267,13 @@
 
 			&__content-title {
 				& h2 {
-					font-size: 7rem;
+					font-size: 6.6rem;
 				}
 			}
 
 			&__span-box {
 				& span {
-					font-size: 3rem;
+					font-size: 3.2rem;
 				}
 				& span:last-child {
 					font-size: 2rem;
@@ -387,6 +407,14 @@
 			}
 			&__gradient {
 				height: 6em;
+			}
+		}
+	}
+	@media (max-width: 892px) {
+		.offer {
+			&__content-icons {
+				flex-wrap: wrap;
+				gap: 8em;
 			}
 		}
 	}
@@ -597,11 +625,18 @@
 			}
 		}
 	}
-
+	@media (max-width: 751px) {
+		.offer {
+			&__content-icons {
+				gap: 3em;
+			}
+		}
+	}
 	@media (max-width: 669px) {
 		.header {
 			height: 70vw;
 		}
+
 		.questions {
 			&__box {
 				margin: 2em 4em 4em;
@@ -628,6 +663,14 @@
 			}
 			&__accordeon-btn {
 				margin-left: 0.5em;
+			}
+		}
+	}
+	@media (max-width: 651px) {
+		.offer {
+			&__content-icons {
+				gap: 5em;
+				margin: 0 4em;
 			}
 		}
 	}
@@ -670,6 +713,37 @@
 				& span {
 					font-size: 1.6rem;
 				}
+			}
+
+			&__content-text{
+				font-size: 1.2rem;
+			}
+
+			&__content-icons {
+				margin: 0 1em;
+				gap: 6em;
+			}
+
+			&__icons-box {
+		
+				& span {
+					font-size: 1.8rem;
+				}
+		
+				& i {
+					font-size: 4rem;
+				}
+			}
+			&__content-details {
+		
+				& h3 {
+					font-size: 1.6rem;
+				}
+			}
+		
+			&__content-item {
+				font-size: 1.2rem;
+	
 			}
 
 			&__gradient-bar {
@@ -819,8 +893,6 @@
 	}
 
 	@media (max-width: 450px) {
-	
-
 		.news {
 			&__title {
 				& h2 {
@@ -945,6 +1017,17 @@
 			}
 		}
 	}
+	@media (max-width: 396px) {
+		.offer {
+			&__content-icons {
+				margin: 0 1em;
+			}
+
+			&__icons-box {
+				flex-basis: 100%;
+			}
+		}
+	}
 	@media (max-width: 378px) {
 		.header {
 			&__title {
@@ -966,6 +1049,14 @@
 		}
 
 		.showreel {
+			&__title-box {
+				& h2 {
+					font-size: 3rem;
+				}
+				& span { 
+					margin-bottom: -1em;
+				}
+			}
 			&__carousel-mobile {
 				& i {
 					padding: 0.1em 0.5em;
@@ -977,7 +1068,7 @@
 		.questions {
 			&__title {
 				& h2 {
-					font-size: 3rem;
+					font-size: 2.4rem;
 				}
 			}
 
@@ -990,6 +1081,10 @@
 			&__accordeon-info {
 				max-width: 320px;
 			}
+		}
+
+		.contact {
+			padding-bottom: 4em;
 		}
 	}
 }
