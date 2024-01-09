@@ -13,7 +13,6 @@ menuOpenBtns.forEach(btn =>
 		menuCloseBtn.classList.add('show-btn')
 		body.classList.add('stop-scrolling')
 		langList.classList.remove('active-lang')
-
 	})
 )
 
@@ -45,13 +44,11 @@ multiLangBtns.forEach(btn => {
 		menuOpenBtns.forEach(btn => btn.classList.remove('hide-btn'))
 		menuCloseBtn.classList.remove('show-btn')
 		body.classList.remove('stop-scrolling')
-
 	})
 })
 
 const closeLang = () => {
 	langList.classList.toggle('active-lang')
-	
 }
 
 // const closeLangOutside = e => {
@@ -93,7 +90,6 @@ const nextBtn = document.querySelector('[data-show-btn="next"]')
 const prevBtn = document.querySelector('[data-show-btn="prev"]')
 let contentWidth = 1600
 
-
 showRellMobileBtns.forEach(button => {
 	button.addEventListener('click', () => {
 		let counter = button.dataset.showBtn === 'next' ? 1 : -1
@@ -120,7 +116,7 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', () => {
 	let insetWindowWidth = window.innerWidth
 	let boxWidth = insetWindowWidth / contentWidth
-	galleryBox.style.transform =  boxWidth >= 1 ? 'scale(1)' : `scale(${boxWidth})`
+	galleryBox.style.transform = boxWidth >= 1 ? 'scale(1)' : `scale(${boxWidth})`
 })
 
 // Questions accordeon
@@ -166,180 +162,195 @@ window.addEventListener('click', clickOutsideAccordeon)
 
 //Contact form slider
 
-const fromSlider = document.querySelector('#fromSlider')
-const toSlider = document.querySelector('#toSlider')
-const fromInput = document.querySelector('#fromInput')
-const toInput = document.querySelector('#toInput')
+// const fromSlider = document.querySelector('#fromSlider')
+// const toSlider = document.querySelector('#toSlider')
+// const fromInput = document.querySelector('#fromInput')
+// const toInput = document.querySelector('#toInput')
 
+// function controlFromSlider(fromSlider, toSlider, fromInput ) {
 
+// 	const [from, to] = getParsed(fromSlider, toSlider)
+// 	fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider)
+// 	if (from > to) {
+// 		fromSlider.value = to
+// 		fromInput.innerText = `${to} `
+// 	} else {
+// 		fromInput.innerText = `${from}  `
+// 	}
 
+// }
 
+// function controlToSlider(fromSlider, toSlider, toInput) {
 
-function controlFromSlider(fromSlider, toSlider, fromInput ) {
+// 	const [from, to] = getParsed(fromSlider, toSlider)
+// 	fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider)
+// 	setToggleAccessible(toSlider)
+// 	if (from <= to) {
+// 		toSlider.budget = to
+// 		toInput.innerText = `${to} `
+// 	} else {
+// 		toInput.innerText = `${from} `
+// 		toSlider.value = from
+// 	}
 
-	const [from, to] = getParsed(fromSlider, toSlider)
-	fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider)
-	if (from > to) {
-		fromSlider.value = to
-		fromInput.innerText = `${to} `
-	} else {
-		fromInput.innerText = `${from}  `
-	}
+// }
 
-}
+// function getParsed(currentFrom, currentTo) {
+// 	const from = parseInt(currentFrom.value, 10)
+// 	const to = parseInt(currentTo.value, 10)
+// 	return [from, to]
+// }
 
-function controlToSlider(fromSlider, toSlider, toInput) {
+// function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+// 	const rangeDistance = to.max - to.min
+// 	const fromPosition = from.value - to.min
+// 	const toPosition = to.value - to.min
+// 	controlSlider.style.background = `linear-gradient(
+//       to right,
+//       ${sliderColor} 0%,
+//       ${sliderColor} ${(fromPosition / rangeDistance) * 100}%,
+//       ${rangeColor} ${(fromPosition / rangeDistance) * 100}%,
+//       ${rangeColor} ${(toPosition / rangeDistance) * 100}%,
+//       ${sliderColor} ${(toPosition / rangeDistance) * 100}%,
+//       ${sliderColor} 100%)`
+// }
 
-	const [from, to] = getParsed(fromSlider, toSlider)
-	fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider)
-	setToggleAccessible(toSlider)
-	if (from <= to) {
-		toSlider.budget = to
-		toInput.innerText = `${to} `
-	} else {
-		toInput.innerText = `${from} `
-		toSlider.value = from
-	}
+// function setToggleAccessible(currentTarget) {
+// 	const toSlider = document.querySelector('#toSlider')
+// 	if (Number(currentTarget.value) <= 0) {
+// 		toSlider.style.zIndex = 2
+// 	} else {
+// 		toSlider.style.zIndex = 0
+// 	}
+// }
 
-}
+// fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider)
+// setToggleAccessible(toSlider)
 
-function getParsed(currentFrom, currentTo) {
-	const from = parseInt(currentFrom.value, 10)
-	const to = parseInt(currentTo.value, 10)
-	return [from, to]
-}
+// fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput)
+// toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput)
 
-function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
-	const rangeDistance = to.max - to.min
-	const fromPosition = from.value - to.min
-	const toPosition = to.value - to.min
-	controlSlider.style.background = `linear-gradient(
-      to right,
-      ${sliderColor} 0%,
-      ${sliderColor} ${(fromPosition / rangeDistance) * 100}%,
-      ${rangeColor} ${(fromPosition / rangeDistance) * 100}%,
-      ${rangeColor} ${(toPosition / rangeDistance) * 100}%, 
-      ${sliderColor} ${(toPosition / rangeDistance) * 100}%, 
-      ${sliderColor} 100%)`
-}
+// Contact form budget
 
-function setToggleAccessible(currentTarget) {
-	const toSlider = document.querySelector('#toSlider')
-	if (Number(currentTarget.value) <= 0) {
-		toSlider.style.zIndex = 2
-	} else {
-		toSlider.style.zIndex = 0
-	}
-}
+const budgetBoxFrom = document.querySelector('.contact__budget-box--from')
+const budgetBoxTo = document.querySelector('.contact__budget-box--to')
+const budgetInputFrom = document.querySelector('#budget-from')
+const budgetInputTo = document.querySelector('#budget-to')
 
-fillSlider(fromSlider, toSlider, '#C6C6C6', '#b60732', toSlider)
-setToggleAccessible(toSlider)
+budgetInputFrom.addEventListener('focusin', () => {
+	budgetInputFrom.value = ''
 
-fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput)
-toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput)
+	budgetBoxFrom.classList.add('active')
+})
 
+budgetInputTo.addEventListener('focusin', () => {
+	budgetInputTo.value = ''
+	budgetBoxTo.classList.add('active')
+})
 
+budgetInputFrom.addEventListener('focusout', () => {
+	budgetBoxFrom.classList.remove('active')
+	budgetBoxTo.classList.remove('active')
+})
+budgetInputTo.addEventListener('focusout', () => {
+	budgetBoxTo.classList.remove('active')
+})
 
 //Multi language
 
+const langBtns = document.querySelectorAll('.nav__lang-btn')
 
-const langBtns = document.querySelectorAll('.nav__lang-btn')			
+let MultiLang = function (url, lang, onload) {
+	this.phrases = {}
 
+	this.selectedLanguage = (lang || navigator.language || navigator.userLanguage).substring(0, 2)
 
-let MultiLang = function(url, lang, onload)
-{
-	
-	this.phrases = {};
-
-	this.selectedLanguage = (lang || navigator.language || navigator.userLanguage).substring(0, 2);
-	
-	this.onLoad = onload;
+	this.onLoad = onload
 
 	if (typeof url !== 'undefined') {
-		let obj = this;
-		let req = new XMLHttpRequest();
+		let obj = this
+		let req = new XMLHttpRequest()
 
-		req.open("GET", url, true);
+		req.open('GET', url, true)
 		req.onreadystatechange = function (evt) {
-			if (evt.target.readyState == 4 && evt.target.status == 200) 
-			{
-				this.phrases = JSON.parse( evt.target.responseText );
+			if (evt.target.readyState == 4 && evt.target.status == 200) {
+				this.phrases = JSON.parse(evt.target.responseText)
 
-				this.setLanguage(this.selectedLanguage);
-				
+				this.setLanguage(this.selectedLanguage)
+
 				if (this.onLoad) {
-					this.onLoad();
+					this.onLoad()
 				}
+			}
+		}.bind(obj)
+		req.addEventListener(
+			'error',
+			function (e) {
+				console.log('MultiLang.js: Error reading json file.')
+			},
+			false
+		)
 
-			};
-		}.bind(obj);
-		req.addEventListener("error", function(e) {
-			console.log('MultiLang.js: Error reading json file.');
-		}, false);
-		
-		req.send(null);
-	};
+		req.send(null)
+	}
 
-	this.setLanguage = function(langcode) {
+	this.setLanguage = function (langcode) {
 		if (!this.phrases.hasOwnProperty(langcode)) {
 			for (let key in this.phrases) {
 				if (this.phrases.hasOwnProperty(key)) {
-					langcode = key; 
-					break;
-				};
-			};
-		};
+					langcode = key
+					break
+				}
+			}
+		}
 
-		this.selectedLanguage = langcode;
-	};
+		this.selectedLanguage = langcode
+	}
 
-	this.get = function(key) {
-		let str;
-		if (this.phrases[this.selectedLanguage]) str = this.phrases[this.selectedLanguage][key];
+	this.get = function (key) {
+		let str
+		if (this.phrases[this.selectedLanguage]) str = this.phrases[this.selectedLanguage][key]
 
-    str = (str || key)
-		return str;
+		str = str || key
+		return str
+	}
 }
-}
-let multilang;
-
+let multilang
 
 function onLoad() {
-
-  multilang = new MultiLang('dataLang.json', 'en');
+	multilang = new MultiLang('dataLang.json', 'en')
 }
 
 function langSelectChange(sel) {
-  multilang.setLanguage(sel.value);
-  refreshLabels();
+	multilang.setLanguage(sel.value)
+	refreshLabels()
 }
 
 function refreshLabels() {
-  let allnodes = document.querySelectorAll("[data-lang]");
+	let allnodes = document.querySelectorAll('[data-lang]')
 
-  
-  for (let i=0, max=allnodes.length; i < max; i++) {
-    let idname = allnodes[i].dataset.lang;
-    if (idname != '') {
-      allnodes[i].textContent = multilang.get(idname);
-    };
-  };
+	for (let i = 0, max = allnodes.length; i < max; i++) {
+		let idname = allnodes[i].dataset.lang
+		if (idname != '') {
+			allnodes[i].textContent = multilang.get(idname)
+		}
+	}
 }
 
-  langBtns.forEach(btn => 
-    btn.addEventListener('click', e => {
-      langSelectChange(e.target)
+langBtns.forEach(btn =>
+	btn.addEventListener('click', e => {
+		langSelectChange(e.target)
+	})
+)
 
-  })
-  )
+body.addEventListener('load', onLoad())
+langBtns.forEach(btn =>
+	btn.addEventListener('click', () => {
+		langList.classList.remove('active-lang')
+	})
+)
 
-  body.addEventListener('load', onLoad())
-  langBtns.forEach(btn => btn.addEventListener('click', () => {
-	langList.classList.remove('active-lang')
-  }))
-
-
-  // Footer current year
+// Footer current year
 
 const footerYear = document.querySelector('.footer__foot-year')
 const handleCurrentYear = () => {

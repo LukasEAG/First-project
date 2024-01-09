@@ -480,37 +480,52 @@
                     </div>
                     <div class="contact__form-slider">
                         <span data-lang="contact-budget-span">Zakładany budżet</span>
-                        <label for="budget" data-lang="contact-budget">Przesuń, aby wskazać zakres budżetu</label>
-                        <div class="contact__slider-container">
-                            <div class="contact__slider-control">
+                        <label for="budget" data-lang="contact-budget">Proszę podać przedział planowanego budżetu w zakresie:</label>
+
+                        <div class="contact__budget-input">
+                            <div class="contact__budget-box contact__budget-box--from">
+
+                                <span data-lang="contact-budget-from">Od</span>
+                                <input type="number" value="5000" id="budget-from" name="budget-from">
+                                <span data-lang="contact-budget-currency">zł</span>
+                            </div>
+                            <div class="contact__budget-box contact__budget-box--to">
+
+                                <span data-lang="contact-budget-to">Do</span>
+                                <input type="number" value="1000000" id="budget-to" name="budget-to">
+                                <span data-lang="contact-budget-currency">zł</span>
+                            </div>
+                        </div>
+                        <!-- <div class="contact__slider-container"> -->
+                            <!-- <div class="contact__slider-control">
                                 <input id="fromSlider" type="range" value="5000" min="5000" max="1000000" step="1000"/>
                                 <input id="toSlider" type="range" value="1000000" min="5000" max="1000000" step="1000" />
-                            </div>
-                            <div class="contact__slider-form-control">
-                                <div class="contact__control-container">
+                            </div> -->
+                            <!-- <div class="contact__slider-form-control"> -->
+                                <!-- <div class="contact__control-container"> -->
                                     <!-- <div class="form_control_container__time">Min</div> -->
                                     <!-- <input class="form_control_container__time__input" type="number" id="fromInput"
                                             value="10" min="0" max="100" /> -->
-                                            <div class="contact__budget-box contact__budget-box--from">
+                                            <!-- <div class="contact__budget-box contact__budget-box--from">
                                                 <span id="fromInput" >5000</span>
                                                 <span data-lang="contact-budget-currency">zł</span>
                                             </div>
                                             <div class="contact__budget-box contact__budget-box--to">
                                                 <span id="toInput" >1 000 000 </span>
                                                 <span data-lang="contact-budget-currency">zł</span>
-                                            </div>
+                                            </div> -->
                                  
                                      
 
-                                </div>
+                                <!-- </div> -->
                                 <!-- <div class="form_control_container">
                                         <div class="form_control_container__time">Max</div>
                                         <input class="form_control_container__time__input" type="number" id="toInput"
                                             value="30" min="0" max="100" />
                                             <span id="toInput">100</span>
                                     </div> -->
-                            </div>
-                        </div>
+                            <!-- </div> -->
+                        <!-- </div> -->
                     </div>
                     <div class="contact__form-msg">
 

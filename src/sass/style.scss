@@ -819,8 +819,14 @@ section {
 		left: 0;
 		width: 100%;
 		height: 5em;
-		background: rgb(0,0,0);
-background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(21,46,91,1) 70%, rgba(182,7,50,1) 70%, rgba(182,7,50,1) 93%);
+		background: rgb(0, 0, 0);
+		background: linear-gradient(
+			270deg,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(21, 46, 91, 1) 70%,
+			rgba(182, 7, 50, 1) 70%,
+			rgba(182, 7, 50, 1) 93%
+		);
 	}
 }
 
@@ -978,6 +984,12 @@ background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(21,46,91,1) 70%, rgba
 			color: $eag-white;
 		}
 
+		& input:focus,
+		textarea:focus {
+			outline: none;
+			border-bottom: 1px solid $eag-white;
+		}
+
 		& label {
 			margin: 1em 0;
 
@@ -1099,11 +1111,66 @@ background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(21,46,91,1) 70%, rgba
 		}
 	}
 
+	&__budget-input {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: 4em 0 2em;
+	}
+
+	&__budget-box {
+		display: flex;
+		align-items: center;
+		padding: 1em 0.8em;
+		border-radius: 5px;
+
+		&--from {
+			background-color: $eag-blue;
+		}
+
+		&--to {
+			background-color: $eag-red;
+		}
+
+		& span {
+			margin-top: 0;
+			padding: 0 0.6em;
+			font-size: 1.6rem;
+		}
+
+		& input {
+			align-self: auto;
+			margin-bottom: 0;
+			max-width: 4.6em;
+			font-size: 1.6rem;
+			text-align: center;
+			border-bottom: none;
+		}
+
+		& input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		& input:focus-within {
+			outline: none;
+			border: none;
+		}
+	}
+	.active {
+		background-color: $eag-white;
+
+		& span, input {
+			color: $eag-black;
+			
+		}
+	}
+
 	&__slider-container {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		margin: 4em auto;
 	}
 
 	&__slider-control {
@@ -1177,26 +1244,26 @@ background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(21,46,91,1) 70%, rgba
 		width: 100%;
 	}
 
-	&__budget-box {
-		width: 4.6em;
-		height: 1.4em;
-		border: none;
-		border-radius: 8px;
-		text-align: center;
+	// &__budget-box {
+	// 	width: 4.6em;
+	// 	height: 1.4em;
+	// 	border: none;
+	// 	border-radius: 8px;
+	// 	text-align: center;
 
-		& span {
-			font-size: 1.4rem;
-			color: $eag-white;
-		}
+	// 	& span {
+	// 		font-size: 1.4rem;
+	// 		color: $eag-white;
+	// 	}
 
-		&--from {
-			background-color: $eag-blue;
-		}
+	// 	&--from {
+	// 		background-color: $eag-blue;
+	// 	}
 
-		&--to {
-			background-color: $eag-red;
-		}
-	}
+	// 	&--to {
+	// 		background-color: $eag-red;
+	// 	}
+	// }
 
 	// & input[type='number']::-webkit-inner-spin-button,
 	// & input[type='number']::-webkit-outer-spin-button {

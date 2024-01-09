@@ -890,6 +890,18 @@
 					font-size: 2rem;
 				}
 			}
+			&__budget-box {
+				padding: 1em 0.8em;
+		
+				& span {
+
+					font-size: 1.2rem;
+				}
+		
+				& input {
+					font-size: 1.2rem;
+				}
+			}
 
 			&__gradient {
 				height: 4em;
@@ -1089,7 +1101,20 @@
 		}
 
 		.contact {
-			padding-bottom: 4em;
+			&__budget-box {
+				padding: .8em 0.4em;
+		
+				& span {
+
+					font-size: 1.2rem;
+				}
+		
+				& input {
+					font-size: 1.2rem;
+				}
+			}
+
 		}
+
 	}
 }
