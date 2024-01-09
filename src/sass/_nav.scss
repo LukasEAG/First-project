@@ -224,8 +224,15 @@
 
 		&__menu-items {
 			flex-direction: column;
-			justify-content: space-evenly;
-			height: calc(100% - 85px);
+			justify-content: center;
+			height: calc(100dvh - 85px);
+		}
+
+		&__menu-item {
+			margin: 1.2em;
+		}
+		&__menu-item:first-child {
+			padding: .3em 1.2em;
 		}
 
 
@@ -266,7 +273,7 @@
 		}
 
 		&__menu-items {
-			height: calc(100% - 65px);
+			height: calc(100dvh - 65px);
 		}
 
 		&__navbar {

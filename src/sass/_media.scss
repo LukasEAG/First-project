@@ -117,7 +117,7 @@
 				}
 			}
 			&__content-text {
-				padding: 5rem 4rem;
+				padding: 4rem;
 			}
 
 			&__icons-box {
@@ -422,7 +422,12 @@
 		}
 	}
 	@media (max-width: 769px) {
+		section {
+			scroll-margin-top: 65px;
+
+		}
 		.header {
+			scroll-margin-top: 0;
 			top: 65px;
 
 			&__head {
@@ -459,6 +464,17 @@
 					font-size: 2.4rem;
 				}
 			}
+			&__content-section {
+				scroll-margin-top: 65px;
+
+			}
+			&__content-text {
+				padding: 2rem 3rem 3rem;
+			}
+			&__content-details {
+				padding: 2rem 3rem 3rem;
+			}
+
 		}
 
 		.news {
@@ -694,6 +710,9 @@
 			}
 		}
 		.offer {
+			&__title-section {
+				margin: 4em 0 0;
+			}
 			&__title-text {
 				& h2 {
 					font-size: 4rem;
