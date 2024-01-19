@@ -383,17 +383,11 @@
 				width: 100%;
 			}
 
-			&__form-slider {
-				margin: 4em 2em 0;
-				padding: 1em;
+			&__form-budget {
+				margin: 2em 2em 0;
 				max-width: none;
 				width: auto;
-
-				& label {
-					font-size: 1.4rem;
-				}
 			}
-
 			&__form-msg {
 				margin: 4em 2em 0;
 				padding: 1em;
@@ -632,8 +626,9 @@
 				margin-bottom: 0;
 			}
 
-			&__form-slider {
-				margin: 4em 1em 0;
+			&__form-budget {
+				margin: 2em 1em 0;
+			
 			}
 
 			&__form-msg {
@@ -1040,10 +1035,8 @@
 				flex-direction: column;
 			}
 
-			&__form-slider {
-				& label {
-					font-size: 1.2rem;
-				}
+			&__form-budget {
+				padding: 1em;
 			}
 
 			&__form-btn {
