@@ -30,6 +30,18 @@
 				font-size: 1.4rem;
 			}
 		}
+		.showreel {
+			&__instagram-span {
+				font-size: 1.8rem;
+			}
+			&__instagram-btn {
+				padding: 0.4em 1.6em;
+				font-size: 1.6rem;
+				& i {
+					font-size: 3rem;
+				}
+			}
+		}
 
 		.questions {
 			&__box {
@@ -86,8 +98,6 @@
 			&__img {
 				width: 50%;
 			}
-
-			
 		}
 	}
 
@@ -298,8 +308,6 @@
 				top: -2em;
 				height: 4em;
 			}
-
-			
 		}
 
 		.why-us {
@@ -395,6 +403,13 @@
 				width: auto;
 			}
 
+			&__form-attachments {
+				margin: 4em 2em 0;
+				padding: 1em;
+				max-width: none;
+				width: auto;
+			}
+
 			&__form-btns {
 				margin: 2em auto;
 			}
@@ -418,7 +433,6 @@
 	@media (max-width: 769px) {
 		section {
 			scroll-margin-top: 65px;
-
 		}
 		.header {
 			scroll-margin-top: 0;
@@ -460,7 +474,6 @@
 			}
 			&__content-section {
 				scroll-margin-top: 65px;
-
 			}
 			&__content-text {
 				padding: 2rem 3rem 3rem;
@@ -468,7 +481,6 @@
 			&__content-details {
 				padding: 2rem 3rem 3rem;
 			}
-
 		}
 
 		.news {
@@ -560,8 +572,6 @@
 					max-height: 839px;
 				}
 			}
-
-			
 		}
 
 		.why-us {
@@ -628,7 +638,6 @@
 
 			&__form-budget {
 				margin: 2em 1em 0;
-			
 			}
 
 			&__form-msg {
@@ -684,6 +693,14 @@
 				margin: 0 4em;
 			}
 		}
+		.contact {
+			&__attachments-btn {
+				width: 35%;
+			}
+			&__attachments-label {
+				width: 65%;
+			}
+		}
 	}
 
 	@media (max-width: 568px) {
@@ -729,7 +746,7 @@
 				}
 			}
 
-			&__content-text{
+			&__content-text {
 				font-size: 1.2rem;
 			}
 
@@ -739,25 +756,22 @@
 			}
 
 			&__icons-box {
-		
 				& span {
 					font-size: 1.8rem;
 				}
-		
+
 				& i {
 					font-size: 4rem;
 				}
 			}
 			&__content-details {
-		
 				& h3 {
 					font-size: 1.6rem;
 				}
 			}
-		
+
 			&__content-item {
 				font-size: 1.2rem;
-	
 			}
 
 			&__gradient-bar {
@@ -809,6 +823,22 @@
 
 			&__gradient-bar {
 				height: 4em;
+			}
+
+			&__instagram-box {
+				margin: 4em 0 5em;
+				gap: 2em;
+			}
+
+			&__instagram-span {
+				font-size: 1.4rem;
+			}
+			&__instagram-btn {
+				padding: 0.4em 1.6em;
+				font-size: 1.4rem;
+				& i {
+					font-size: 2.4rem;
+				}
 			}
 		}
 
@@ -906,15 +936,33 @@
 			}
 			&__budget-box {
 				padding: 1em 0.8em;
-		
-				& span {
 
+				& span {
 					font-size: 1.2rem;
 				}
-		
+
 				& input {
 					font-size: 1.2rem;
 				}
+			}
+			&__form-attachments {
+				max-height: 330px;
+			}
+
+			&__attachments-box{
+				flex-direction: column;
+				align-items: center;
+			}
+			&__attachments-label {
+				margin: .5em 0;
+				width: 100%;
+				text-align: center;
+				
+			}
+			&__attachments-btn{
+				margin: 1em 0;
+				padding: 1em 1em;
+				width: 50%;
 			}
 
 			&__gradient {
@@ -954,6 +1002,12 @@
 				& span {
 					font-size: 1.4rem;
 				}
+			}
+			&__instagram-box {
+				display: flex;
+				flex-direction: column;
+				margin: 2em 0 3em;
+
 			}
 		}
 		.questions {
@@ -1044,6 +1098,7 @@
 				margin: 2em auto;
 				width: 100%;
 			}
+
 		}
 	}
 	@media (max-width: 396px) {
@@ -1082,7 +1137,7 @@
 				& h2 {
 					font-size: 3rem;
 				}
-				& span { 
+				& span {
 					margin-bottom: -1em;
 				}
 			}
@@ -1114,19 +1169,16 @@
 
 		.contact {
 			&__budget-box {
-				padding: .8em 0.4em;
-		
-				& span {
+				padding: 0.8em 0.4em;
 
+				& span {
 					font-size: 1.2rem;
 				}
-		
+
 				& input {
 					font-size: 1.2rem;
 				}
 			}
-
 		}
-
 	}
 }

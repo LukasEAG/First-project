@@ -243,7 +243,10 @@
                 <!-- <div class="showreel__gradient-bar"></div> -->
             </div>
 
-
+            <div class="showreel__instagram-box">
+                <span class="showreel__instagram-span">Więcej naszy realizacji</span>
+                <button class="showreel__instagram-btn"><a href="https://www.instagram.com/eagproduction?igsh=MXIzbXZkN2c0aDU5Yg==" target="_blank"><i class="ti ti-brand-instagram"></i>eagproduction</a></button>
+            </div>
         </div>
     </section>
     <section id="questions" class="wrapper">
@@ -504,7 +507,7 @@
 
                     <div class="contact__form-checkbox">
 
-                        <label for="topic" data-lang="contact-topic">Temat</label>
+                        <label for="scope" data-lang="contact-scope">Zakres oferty</label>
                         <div class="contact__form-checkbox-row">
 
                             <div class="contact__form-checkbox-item">
@@ -548,9 +551,21 @@
                         </div>
                     </div>
                     <div class="contact__form-msg">
-
+                        <label for="topic" data-lang="contact-topic">Temat</label>
+                        <input type="text" id="topic" name="topic">
                         <label for="message" data-lang="contact-message">Wiadomość</label>
                         <textarea name="message" id="message"></textarea>
+                    </div>
+                    <div class="contact__form-attachments">
+                        <label for="files" data-lang="contact-files">Załączniki</label>
+                        <input class="contact__attachments-input" type="file" name="fileInput" id="fileInput" multiple accept='image/jpeg, image/png, application/pdf, application/vnd.ms-excel, audio/mpeg, video/mp4, audio/wav, image/x-dwg' >
+                        <div class="contact__attachments-box">
+                               <button class="contact__attachments-btn">Dodaj załączniki</button>
+                            <ul class="contact__attachments-label">Nie wybrano żadnych plików</ul>
+                        </div>
+                        <span class="contact__attachments-span">Dozwolone rozszerzenia plików: .pdf .xls .jpg .png .mp3 . mp4 .wav .dwg </span>
+                        <span class="contact__attachments-span">Maksymalna wilkość plików: 5mb</span>
+                        <span class="contact__attachments-span">Maksymalna ilość plików: 5 szt.</span>
                     </div>
                 </form>
                 <div class="contact__form-btns">

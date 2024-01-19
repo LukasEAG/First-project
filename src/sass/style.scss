@@ -615,6 +615,41 @@ section {
 	&__carousel-mobile {
 		display: none;
 	}
+
+	&__instagram-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 4em 0 5em;
+		gap: 3em;
+	}
+
+	&__instagram-span {
+		font-size: 2.2rem;
+		text-transform: uppercase;
+		color: $eag-white;
+	}
+	&__instagram-btn {
+		padding: 0.4em 1.6em;
+		font-size: 2rem;
+		text-transform: uppercase;
+		background-color: $eag-red;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+
+		& a {
+			display: inline-block;
+			text-decoration: none;
+			color: $eag-white;
+		}
+
+		& i {
+			display: inline-block;
+			font-size: 3rem;
+			vertical-align: sub;
+		}
+	}
 }
 
 .questions {
@@ -1103,7 +1138,7 @@ section {
 		max-height: 300px;
 		width: 100%;
 		height: auto;
-		background-color: rgba( #000, $alpha: 0.7);
+		background-color: rgba(#000, $alpha: 0.7);
 
 		& span {
 			margin-top: 1em;
@@ -1162,24 +1197,75 @@ section {
 	.active {
 		background-color: $eag-white;
 
-		& span, input {
+		& span,
+		input {
 			color: $eag-black;
-			
 		}
 	}
-
 
 	&__form-msg {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		margin: 4em auto 0;
+		margin: 2em auto 0;
 		padding: 1em 4em;
 		max-width: 710px;
 		max-height: 400px;
 		width: 100%;
 		height: auto;
 		background-color: rgba(#000, $alpha: 0.7);
+	}
+
+	&__form-attachments {
+		display: flex;
+		flex-direction: column;
+		margin: 2em auto 0;
+		padding: 1em 4em;
+		max-width: 710px;
+		max-height: 285px;
+		width: 100%;
+		height: auto;
+		background-color: rgba(#000, $alpha: 0.7);
+
+		
+	}
+
+	&__attachments-input {
+		display: none;
+	}
+	&__attachments-box{
+		display: flex;
+		align-items: center;
+		margin-bottom: 1em;
+	}
+	&__attachments-btn {
+		padding: 1em 2em;
+		width: 25%;
+		font-size: 1.2rem;
+		color: $eag-white;
+		background-color: $eag-blue;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	
+	&__attachments-label {
+		margin-left: 2em;
+		width: 50%;
+		height: auto;
+		font-size: 1.4rem;
+		color: $eag-white;
+
+		& li {
+			margin: 0.5em 0;
+			font-size: 1.2rem;
+			list-style: none;
+		}
+	}
+
+	&__attachments-span {
+		font-size: 1rem;
+		color: $eag-white;
 	}
 
 	&__form-btns {
