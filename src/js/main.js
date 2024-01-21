@@ -248,7 +248,7 @@ let MultiLang = function (url, lang, onload) {
 let multilang
 
 function onLoad() {
-	multilang = new MultiLang('dataLang.json', 'en')
+	multilang = new MultiLang('dataLang.json', 'pl')
 }
 
 function langSelectChange(sel) {
@@ -308,6 +308,10 @@ hideFileInput.addEventListener('change', () => {
 	  })
 		 
 })
+
+//X post embede
+
+
 // Footer current year
 
 const footerYear = document.querySelector('.footer__foot-year')
