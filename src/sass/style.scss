@@ -1221,6 +1221,10 @@ section {
 			border-bottom: none;
 		}
 
+		& input::placeholder {
+				color: $eag-white;
+			}
+
 		& input::-webkit-outer-spin-button,
 		input::-webkit-inner-spin-button {
 			-webkit-appearance: none;
@@ -1238,6 +1242,10 @@ section {
 		& span,
 		input {
 			color: $eag-black;
+		}
+
+		& input::placeholder {
+			content: '';
 		}
 	}
 
@@ -1271,6 +1279,7 @@ section {
 	}
 	&__attachments-box {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 1em;
 	}
@@ -1286,7 +1295,8 @@ section {
 	}
 
 	&__attachments-label {
-		margin-left: 2em;
+		margin-left: 1em;
+		flex-grow: 1;
 		width: 50%;
 		height: auto;
 		font-size: 1.4rem;
@@ -1297,6 +1307,17 @@ section {
 			font-size: 1.2rem;
 			list-style: none;
 		}
+	}
+
+	&__attachments-wetransfer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: .6em 1.6em;
+		background-color: $eag-white;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer;
 	}
 
 	&__attachments-span {
