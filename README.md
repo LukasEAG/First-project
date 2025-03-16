@@ -26,5 +26,4 @@ This is my next project of creating webpage without using tutorials. The graphic
 
 
 ## Live: 
-https://lukaseag.github.io/FirstProject/
-
+https://lukaseag.github.io/First-project/
