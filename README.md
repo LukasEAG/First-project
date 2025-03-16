@@ -10,11 +10,12 @@ This is my next project of creating webpage without using tutorials. The graphic
 
 - was created and carefully reproduced based on a mock-up,
 - it was made professionally, just like other websites of serious companies (the client doesn't know anything about technical things, so he trusts you to do everything perfectly),
-- have slide gallery image,
-- have your own script written in JS for the hamburger menu,
+- place the video in the header section,
+- had slide gallery image,
+- had your own script written in JS for the hamburger menu,
 - some version of scroll-spy is also welcome,
-- have contact form,
-- have the option to choose the language
+- had contact form,
+- had the option to choose the language
   
 
 ### Technologies used:
